@@ -46,15 +46,15 @@
     </Reference>
     <Reference Include="PikaLib, Version=1.0.4810.38921, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.dll</HintPath>
     </Reference>
     <Reference Include="PikaLib.Controls, Version=1.0.4813.4148, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.Controls.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.Controls.dll</HintPath>
     </Reference>
     <Reference Include="PikaLib.File, Version=1.0.4813.4381, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

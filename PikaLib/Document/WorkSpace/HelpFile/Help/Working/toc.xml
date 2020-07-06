@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic id="N:PikaLib" project="_Namespaces" file="53870eb6-e7f8-760c-6c11-c23b45f88370">
+    <topic id="T:PikaLib.ExceptionMessages" project="PikaLib" file="7784102d-94e4-f5f4-78d2-eaad9a165b6c">
+      <topic id="Fields.T:PikaLib.ExceptionMessages" project="PikaLib" file="6206e34d-1662-4a15-082b-5bcfe5ee9df4">
+        <topic id="F:PikaLib.ExceptionMessages.ArgumentExceptionMessage1" project="PikaLib" file="f6789ce4-21c4-6891-382a-21250bff1800" />
+        <topic id="F:PikaLib.ExceptionMessages.NotInitializedExceptionMessage1" project="PikaLib" file="ee545602-60ff-52a3-da8f-9c55df9b24fe" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.NotInitializedException" project="PikaLib" file="1563e186-8249-058e-4dfa-fb8705f82778">
+      <topic id="Overload:PikaLib.NotInitializedException.#ctor" project="PikaLib" file="e9a65c8a-3991-9d2a-e736-eb82028ada4b">
+        <topic id="M:PikaLib.NotInitializedException.#ctor" project="PikaLib" file="5a34f112-1f67-4cfc-976a-626198317409" />
+        <topic id="M:PikaLib.NotInitializedException.#ctor(System.String)" project="PikaLib" file="a1ea7fb3-05a8-2c82-f115-547f56edbb48" />
+        <topic id="M:PikaLib.NotInitializedException.#ctor(System.String,System.Exception)" project="PikaLib" file="c48b0b2f-3c06-5662-25ce-81293f0aaff6" />
+      </topic>
+      <topic id="Methods.T:PikaLib.NotInitializedException" project="PikaLib" file="af3a7818-d660-8a8a-f696-fb7758e85cf1" />
+      <topic id="Properties.T:PikaLib.NotInitializedException" project="PikaLib" file="1b8f5a8f-20e4-367e-3b05-ed4188d0588b" />
+    </topic>
+  </topic>
+  <topic id="N:PikaLib.Controls" project="_Namespaces" file="48d73583-55fb-aa9b-860b-c09cc7e98137">
+    <topic id="T:PikaLib.Controls.MdiChildForm" project="PikaLib.Controls" file="d741c1b9-fd03-7ad1-a59b-1b042ff35801">
+      <topic id="Overload:PikaLib.Controls.MdiChildForm.#ctor" project="PikaLib.Controls" file="d2180540-291e-0939-6829-bd342c32ef2a">
+        <topic id="M:PikaLib.Controls.MdiChildForm.#ctor(System.Windows.Forms.UserControl,System.Windows.Forms.Form)" project="PikaLib.Controls" file="b30eeae7-32b1-2328-d49c-39318409c49e" />
+        <topic id="M:PikaLib.Controls.MdiChildForm.#ctor(System.Windows.Forms.UserControl,System.Windows.Forms.Form,System.String)" project="PikaLib.Controls" file="8ac4f51e-3891-a023-6760-ed478962dbba" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Controls.MdiChildForm" project="PikaLib.Controls" file="8ac6599f-483b-73bf-1e5c-7ce402d1d129">
+        <topic id="Overload:PikaLib.Controls.MdiChildForm.Dispose" project="PikaLib.Controls" file="2411f18a-6eb2-fc7e-2596-c7c9b2a22c7c">
+          <topic id="M:PikaLib.Controls.MdiChildForm.Dispose(System.Boolean)" project="PikaLib.Controls" file="544a93a2-4e34-5997-667c-80a5c88d3f10" />
+        </topic>
+        <topic id="M:PikaLib.Controls.MdiChildForm.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)" project="PikaLib.Controls" file="d1999352-c07f-6518-7a5f-f8f9ee75d7c5" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Controls.MdiChildForm" project="PikaLib.Controls" file="d6772030-f00c-1ea3-a3f1-68153bb002a1">
+        <topic id="P:PikaLib.Controls.MdiChildForm.MdiUserControl" project="PikaLib.Controls" file="f7b7b90e-411f-c68c-aaef-80a7be0b7091" />
+      </topic>
+      <topic id="Events.T:PikaLib.Controls.MdiChildForm" project="PikaLib.Controls" file="7ecdd82d-454e-4fcd-f4f1-7785d2aa9fbb" />
+    </topic>
+    <topic id="T:PikaLib.Controls.UserControlSwitchingPanel" project="PikaLib.Controls" file="5db29161-8f87-7d35-f076-c8e12d4229f6">
+      <topic id="Overload:PikaLib.Controls.UserControlSwitchingPanel.#ctor" project="PikaLib.Controls" file="32ae1699-0ebb-2c7b-e0d7-da0cd3a19f55">
+        <topic id="M:PikaLib.Controls.UserControlSwitchingPanel.#ctor" project="PikaLib.Controls" file="fbfe0c61-96c0-fe23-321b-c30d6f485bc1" />
+        <topic id="M:PikaLib.Controls.UserControlSwitchingPanel.#ctor(System.Windows.Forms.UserControl)" project="PikaLib.Controls" file="3f77f865-0f26-25d0-2b82-575820335462" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Controls.UserControlSwitchingPanel" project="PikaLib.Controls" file="327cb169-9b7d-e8aa-ef72-d0e876f45cf9">
+        <topic id="M:PikaLib.Controls.UserControlSwitchingPanel.ChangeUserContorol(System.Windows.Forms.UserControl)" project="PikaLib.Controls" file="d8264492-ee80-9ccd-ea36-28194cc763c8" />
+        <topic id="M:PikaLib.Controls.UserControlSwitchingPanel.ClearPanel" project="PikaLib.Controls" file="bfb51b68-ef4d-2ffe-8f01-2a5bc4ce8c0d" />
+        <topic id="Overload:PikaLib.Controls.UserControlSwitchingPanel.Dispose" project="PikaLib.Controls" file="913701ba-aac4-0e03-f1e2-2e8b03de2dbe">
+          <topic id="M:PikaLib.Controls.UserControlSwitchingPanel.Dispose(System.Boolean)" project="PikaLib.Controls" file="d900a978-b393-51e6-120f-cd7c07601ba9" />
+        </topic>
+      </topic>
+      <topic id="Properties.T:PikaLib.Controls.UserControlSwitchingPanel" project="PikaLib.Controls" file="67046c58-99d6-7bbc-fcbf-70a842c765a8">
+        <topic id="P:PikaLib.Controls.UserControlSwitchingPanel.UserContorol" project="PikaLib.Controls" file="63d8068f-bac7-fd8f-4cec-261ffec83665" />
+      </topic>
+      <topic id="Events.T:PikaLib.Controls.UserControlSwitchingPanel" project="PikaLib.Controls" file="45cee947-c187-c716-8790-f4ba8fa89d19" />
+    </topic>
+  </topic>
+  <topic id="N:PikaLib.File" project="_Namespaces" file="46428214-6b2b-faec-c054-49ffa358ed53">
+    <topic id="T:PikaLib.File.BinaryFile" project="PikaLib.File" file="7db0332d-0735-8c4a-dd79-d18bea0adb72">
+      <topic id="Methods.T:PikaLib.File.BinaryFile" project="PikaLib.File" file="79faa7e8-59db-08bb-1a03-4154f8cc4a84">
+        <topic id="Overload:PikaLib.File.BinaryFile.ReadBinaryFile" project="PikaLib.File" file="b4499cad-57d7-e9a9-7fd5-ddf96b41734d">
+          <topic id="M:PikaLib.File.BinaryFile.ReadBinaryFile(System.IO.Stream)" project="PikaLib.File" file="c45825f1-2d50-cdd0-693b-0a06f143d5b1" />
+          <topic id="M:PikaLib.File.BinaryFile.ReadBinaryFile(System.String)" project="PikaLib.File" file="81257996-ee54-622c-c87a-0e2f1cc51398" />
+        </topic>
+        <topic id="Overload:PikaLib.File.BinaryFile.WriteBinaryFile" project="PikaLib.File" file="6979b229-e026-028d-3407-b49ff8216813">
+          <topic id="M:PikaLib.File.BinaryFile.WriteBinaryFile(System.IO.Stream,System.Object)" project="PikaLib.File" file="bd2cf65f-782a-9518-721e-7e6d03d5300e" />
+          <topic id="M:PikaLib.File.BinaryFile.WriteBinaryFile(System.String,System.Object)" project="PikaLib.File" file="d058ed4d-5cbd-f85f-d325-729edff7fc06" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.File.IniFile" project="PikaLib.File" file="10538c75-d213-a7bf-99a0-650ca69f7749">
+      <topic id="M:PikaLib.File.IniFile.#ctor(System.String)" project="PikaLib.File" file="f3961975-7931-4f3d-3d8f-09e4490df752" />
+      <topic id="Methods.T:PikaLib.File.IniFile" project="PikaLib.File" file="6761741c-15a8-3a19-c744-2c342470305c">
+        <topic id="M:PikaLib.File.IniFile.GetValue(System.String,System.String,System.String)" project="PikaLib.File" file="14926f38-c883-7042-2ae1-9c541639de91" />
+      </topic>
+      <topic id="Properties.T:PikaLib.File.IniFile" project="PikaLib.File" file="a12ad097-4c7f-bf29-ec83-00a98f8d518a">
+        <topic id="P:PikaLib.File.IniFile.FilePath" project="PikaLib.File" file="c0b8d15e-92a2-f920-7899-e8de30964a55" />
+        <topic id="P:PikaLib.File.IniFile.Item(System.String,System.String)" project="PikaLib.File" file="61d56442-b3b3-5018-0882-197177cd6455" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.File.SerializableXML" project="PikaLib.File" file="93cd993c-836a-d73f-665e-b8d565d07ddd">
+      <topic id="M:PikaLib.File.SerializableXML.#ctor" project="PikaLib.File" file="77301d4b-d265-6550-99c1-da81ea81fd00" />
+      <topic id="Methods.T:PikaLib.File.SerializableXML" project="PikaLib.File" file="f01e5afb-daf8-9671-40b0-0001d9b95be5">
+        <topic id="M:PikaLib.File.SerializableXML.ApplyDefault" project="PikaLib.File" file="558fb72e-f693-d904-e876-a3f98540800b" />
+        <topic id="Overload:PikaLib.File.SerializableXML.ReadXMLFile" project="PikaLib.File" file="2015e2f8-f37d-b47c-7db0-0e31fabc06a3">
+          <topic id="M:PikaLib.File.SerializableXML.ReadXMLFile(System.String,System.Type,System.Boolean)" project="PikaLib.File" file="63bf24fc-abb1-1f08-f482-ab79b8c5a166" />
+          <topic id="M:PikaLib.File.SerializableXML.ReadXMLFile(System.IO.Stream,System.Type,System.String,System.Boolean)" project="PikaLib.File" file="ac2fa78c-a89f-dc88-7635-76b14c329c7c" />
+        </topic>
+        <topic id="M:PikaLib.File.SerializableXML.Save" project="PikaLib.File" file="bf3be829-2e80-5f45-0fd4-53111ef3255e" />
+        <topic id="M:PikaLib.File.SerializableXML.ToStream" project="PikaLib.File" file="7f84e265-ea24-9c5b-c9b1-5ed5fd2d8682" />
+        <topic id="M:PikaLib.File.SerializableXML.ToString" project="PikaLib.File" file="8f6ca81a-fb61-bc3b-9cc2-ce944add6690" />
+        <topic id="Overload:PikaLib.File.SerializableXML.WriteXMLFile" project="PikaLib.File" file="6ae85131-607b-b9b4-f8cb-fe3d31692956">
+          <topic id="M:PikaLib.File.SerializableXML.WriteXMLFile(System.IO.Stream,PikaLib.File.SerializableXML)" project="PikaLib.File" file="2414c060-01d3-7cc8-9ae6-ff7944ef977e" />
+          <topic id="M:PikaLib.File.SerializableXML.WriteXMLFile(System.String,PikaLib.File.SerializableXML)" project="PikaLib.File" file="f02b0fd8-2ed1-6bf2-080e-3533435b2717" />
+        </topic>
+      </topic>
+      <topic id="Properties.T:PikaLib.File.SerializableXML" project="PikaLib.File" file="4d698222-7f44-4aa5-60bc-92e17f6b1956">
+        <topic id="P:PikaLib.File.SerializableXML.Encoding" project="PikaLib.File" file="220d55a8-a855-95f8-ed08-5224d6f45a2b" />
+        <topic id="P:PikaLib.File.SerializableXML.FilePath" project="PikaLib.File" file="a9b60df4-22d0-c171-1fb2-27e2ed6976e1" />
+        <topic id="P:PikaLib.File.SerializableXML.Indent" project="PikaLib.File" file="4105b087-a5f4-7980-9818-e902eb1bc719" />
+        <topic id="P:PikaLib.File.SerializableXML.IndentChars" project="PikaLib.File" file="3c74b2fb-8108-6f6f-2dcd-305f3c00543e" />
+      </topic>
+    </topic>
+  </topic>
+  <topic id="N:PikaLib.Input" project="_Namespaces" file="26bcae8a-d42a-76f6-b13a-5e3cc0d2a7fd">
+    <topic id="T:PikaLib.Input.CooperativeLevelFlags" project="PikaLib.Input" file="022f03fb-ccb6-e2ae-f762-b15fd8f75520" />
+    <topic id="T:PikaLib.Input.InputDevice" project="PikaLib.Input" file="9e69d484-b762-6da8-dae2-a302eac4d9c2">
+      <topic id="M:PikaLib.Input.InputDevice.#ctor(Microsoft.DirectX.DirectInput.Device)" project="PikaLib.Input" file="4033c0a5-20f4-063e-1c70-332de806890b" />
+      <topic id="Fields.T:PikaLib.Input.InputDevice" project="PikaLib.Input" file="13337b99-70e8-71a1-4f05-3cc947f6640c">
+        <topic id="F:PikaLib.Input.InputDevice.m_Device" project="PikaLib.Input" file="34635074-f383-e485-c1d0-afda9f7bcf18" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Input.InputDevice" project="PikaLib.Input" file="5a1dc37d-3980-a1f8-cfb6-9eb20e684d39">
+        <topic id="M:PikaLib.Input.InputDevice.Acquire" project="PikaLib.Input" file="06e026a9-5f9b-322c-8419-0f44b43ecf13" />
+        <topic id="M:PikaLib.Input.InputDevice.ApplyNewState" project="PikaLib.Input" file="9ce70759-427b-330e-792b-eb04149e64fb" />
+        <topic id="Overload:PikaLib.Input.InputDevice.Dispose" project="PikaLib.Input" file="fe57ceea-6abe-b9ed-b873-7506fdd26659">
+          <topic id="M:PikaLib.Input.InputDevice.Dispose" project="PikaLib.Input" file="54ee3a6e-6cd9-b17e-29d8-27edf1b764c3" />
+          <topic id="M:PikaLib.Input.InputDevice.Dispose(System.Boolean)" project="PikaLib.Input" file="02fcf70a-ab18-041b-2430-5781aa85be4d" />
+        </topic>
+        <topic id="M:PikaLib.Input.InputDevice.Unacquire" project="PikaLib.Input" file="96b8a4b0-0cf3-f7c3-3767-246ddb4df0e1" />
+        <topic id="M:PikaLib.Input.InputDevice.UpdateState" project="PikaLib.Input" file="05176f1b-e5ef-b600-28bd-e9038b9f77d0" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Input.InputDevice" project="PikaLib.Input" file="ae41a483-7047-9b33-d39d-14511b422eaf">
+        <topic id="P:PikaLib.Input.InputDevice.InstanceGuid" project="PikaLib.Input" file="3efcbcfa-dc0c-a87c-d17e-a0d95a1f32cf" />
+        <topic id="P:PikaLib.Input.InputDevice.InstanceName" project="PikaLib.Input" file="6fae0cbd-09ab-6e8c-353b-6102e199f340" />
+        <topic id="P:PikaLib.Input.InputDevice.ObjectName" project="PikaLib.Input" file="edcab16e-7b22-06c9-79c8-c56b79b1954b" />
+        <topic id="P:PikaLib.Input.InputDevice.ProductGuid" project="PikaLib.Input" file="a7f41d4a-070b-715a-09df-179676441db0" />
+        <topic id="P:PikaLib.Input.InputDevice.ProductName" project="PikaLib.Input" file="5ec1a7c6-cf24-bd42-77c6-0f64d08f6f15" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Input.InputDeviceManager" project="PikaLib.Input" file="3550f363-fd82-1596-2aec-fd156c15e836">
+      <topic id="M:PikaLib.Input.InputDeviceManager.#ctor" project="PikaLib.Input" file="05c2e9e5-857a-b1e8-eda9-433d881f79fa" />
+      <topic id="Methods.T:PikaLib.Input.InputDeviceManager" project="PikaLib.Input" file="062850b0-bff1-fa4a-2fb2-719696be158c">
+        <topic id="Overload:PikaLib.Input.InputDeviceManager.Dispose" project="PikaLib.Input" file="f9fcf862-585b-8fdb-180e-e306c62c21d7">
+          <topic id="M:PikaLib.Input.InputDeviceManager.Dispose" project="PikaLib.Input" file="84af1cd5-4e07-c50f-709e-28846306a7b5" />
+          <topic id="M:PikaLib.Input.InputDeviceManager.Dispose(System.Boolean)" project="PikaLib.Input" file="f1b344a6-574f-ee31-8707-f719dd943133" />
+        </topic>
+        <topic id="M:PikaLib.Input.InputDeviceManager.InitializeAllInputDevices" project="PikaLib.Input" file="ce992998-4c52-bb30-7f30-0f9911398a39" />
+        <topic id="Overload:PikaLib.Input.InputDeviceManager.InitializeJoysticks" project="PikaLib.Input" file="b8481372-7fb2-39aa-30de-c19ed8b23713">
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks" project="PikaLib.Input" file="aa1a2692-1f0e-8977-dd79-c1f11d3c2f14" />
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(PikaLib.Input.InputRange)" project="PikaLib.Input" file="7fbc3d0e-120d-1d30-444b-259a93c7161b" />
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(System.IntPtr,PikaLib.Input.CooperativeLevelFlags)" project="PikaLib.Input" file="715d3740-c61a-3e21-dabb-13542a28e6d7" />
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(System.IntPtr,PikaLib.Input.CooperativeLevelFlags,PikaLib.Input.InputRange)" project="PikaLib.Input" file="b10e396d-a7dc-e591-12b8-131b680e17c7" />
+        </topic>
+        <topic id="Overload:PikaLib.Input.InputDeviceManager.InitializeKeyboards" project="PikaLib.Input" file="314d8175-91ce-b991-6190-5668b32942f9">
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeKeyboards" project="PikaLib.Input" file="5f774410-853e-f141-f5be-2bf8c0bfbbb4" />
+          <topic id="M:PikaLib.Input.InputDeviceManager.InitializeKeyboards(System.IntPtr,PikaLib.Input.CooperativeLevelFlags)" project="PikaLib.Input" file="930a376e-f044-af40-b3be-88d7c7092d66" />
+        </topic>
+        <topic id="M:PikaLib.Input.InputDeviceManager.UpdateAllDeviceState" project="PikaLib.Input" file="2d198839-d01e-502f-6e95-e929b4690dfd" />
+        <topic id="M:PikaLib.Input.InputDeviceManager.UpdateJoysticksState" project="PikaLib.Input" file="570258b0-7594-6d13-ee8e-10754a545f87" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Input.InputDeviceManager" project="PikaLib.Input" file="7081caad-67c7-5816-bd79-efdfe7d3cd34">
+        <topic id="P:PikaLib.Input.InputDeviceManager.Joysticks" project="PikaLib.Input" file="0b96af54-ac78-324a-9a7b-3e287e879958" />
+        <topic id="P:PikaLib.Input.InputDeviceManager.Keyboard" project="PikaLib.Input" file="63bf59c1-6342-cb48-9bda-6f92b1cda37f" />
+        <topic id="P:PikaLib.Input.InputDeviceManager.NumberJoysticks" project="PikaLib.Input" file="b56204a6-a846-3cc1-1a82-c20b49d319d0" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Input.InputException" project="PikaLib.Input" file="a984d251-7341-67c6-10bd-bb8261623570">
+      <topic id="Overload:PikaLib.Input.InputException.#ctor" project="PikaLib.Input" file="c9699baf-8c4c-74de-c2b4-bfad3d9db814">
+        <topic id="M:PikaLib.Input.InputException.#ctor" project="PikaLib.Input" file="a7235a20-58d0-01c3-8402-cf16d4aa4592" />
+        <topic id="M:PikaLib.Input.InputException.#ctor(System.String)" project="PikaLib.Input" file="2184c3ad-61b8-ebc9-0c27-a5860df4d14c" />
+        <topic id="M:PikaLib.Input.InputException.#ctor(System.String,System.Exception)" project="PikaLib.Input" file="7a8aa261-ead8-929c-a04f-abffe9d05ff9" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Input.InputException" project="PikaLib.Input" file="8863efc1-be1b-6e20-0155-78e4b285d836" />
+      <topic id="Properties.T:PikaLib.Input.InputException" project="PikaLib.Input" file="bf8d62b3-645c-52fe-190c-47cefc186a88" />
+    </topic>
+    <topic id="T:PikaLib.Input.InputRange" project="PikaLib.Input" file="72341a12-f44b-f771-1047-4878e42e1b0e">
+      <topic id="M:PikaLib.Input.InputRange.#ctor(System.Int32,System.Int32)" project="PikaLib.Input" file="964841b9-c787-5301-c317-8184db4b4b00" />
+      <topic id="Methods.T:PikaLib.Input.InputRange" project="PikaLib.Input" file="d7fd1c89-eb23-be67-c878-f653457fbddf" />
+      <topic id="Properties.T:PikaLib.Input.InputRange" project="PikaLib.Input" file="445fa1d9-3081-994d-afda-18e39a2f2763">
+        <topic id="P:PikaLib.Input.InputRange.Max" project="PikaLib.Input" file="24eee20e-3086-b323-a31d-b4bf7426f088" />
+        <topic id="P:PikaLib.Input.InputRange.Min" project="PikaLib.Input" file="a684da36-4236-1935-ff3f-8dc064df6fa6" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Input.Joystick" project="PikaLib.Input" file="32b63f1d-4281-1fab-5f5c-64d0fd31ec5f">
+      <topic id="M:PikaLib.Input.Joystick.#ctor(Microsoft.DirectX.DirectInput.Device)" project="PikaLib.Input" file="f93850eb-180f-0773-ec0f-24d3864be48e" />
+      <topic id="Fields.T:PikaLib.Input.Joystick" project="PikaLib.Input" file="9726ed99-e85c-5bf8-9e57-74efbfadaa07">
+        <topic id="F:PikaLib.Input.Joystick.m_JoystickState" project="PikaLib.Input" file="ff2cc53c-87a6-6478-fd09-e3c1e778f7de" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Input.Joystick" project="PikaLib.Input" file="4addeaf6-8e35-4da3-9122-08f96299000c">
+        <topic id="M:PikaLib.Input.Joystick.ApplyNewState" project="PikaLib.Input" file="4e1967a9-eb84-599d-418f-2705b6a92570" />
+        <topic id="Overload:PikaLib.Input.Joystick.Dispose" project="PikaLib.Input" file="d1d78018-153f-81ca-32fe-8a920712f32c">
+          <topic id="M:PikaLib.Input.Joystick.Dispose(System.Boolean)" project="PikaLib.Input" file="d5cc518f-e504-f690-6a57-9b65cff12730" />
+        </topic>
+        <topic id="M:PikaLib.Input.Joystick.GetAnalogStick(PikaLib.Input.JoystickAxis)" project="PikaLib.Input" file="bfb0980e-6a23-b065-bbcb-38ff320e0f9c" />
+        <topic id="M:PikaLib.Input.Joystick.GetJoystickPOV(System.Int32)" project="PikaLib.Input" file="53353525-0a43-e903-dc55-e455af7da072" />
+        <topic id="M:PikaLib.Input.Joystick.IsButtonPush(System.Int32)" project="PikaLib.Input" file="bc2e1c0b-7ed9-4734-7eae-b3aff9f3d828" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Input.Joystick" project="PikaLib.Input" file="b4b3532b-dbd9-625a-4818-40043b12cc32">
+        <topic id="P:PikaLib.Input.Joystick.ARX" project="PikaLib.Input" file="e48911a1-4117-130e-df6e-ccc81159c720" />
+        <topic id="P:PikaLib.Input.Joystick.ARY" project="PikaLib.Input" file="d47066c0-1daa-c1da-3a67-b644d7bd47d8" />
+        <topic id="P:PikaLib.Input.Joystick.ARZ" project="PikaLib.Input" file="af371dd0-a877-a12d-6330-64a2f09a616e" />
+        <topic id="P:PikaLib.Input.Joystick.AX" project="PikaLib.Input" file="5b5e27ef-fe76-14b9-e16d-3193d7cd3fdc" />
+        <topic id="P:PikaLib.Input.Joystick.AY" project="PikaLib.Input" file="de6c0ee8-c9ab-78bc-718a-e7c3adec2452" />
+        <topic id="P:PikaLib.Input.Joystick.AZ" project="PikaLib.Input" file="1f3218ed-bcce-a3fd-b605-7a7d480aa51d" />
+        <topic id="P:PikaLib.Input.Joystick.FRX" project="PikaLib.Input" file="98d33148-2974-0b64-86d7-d8ddcce10d42" />
+        <topic id="P:PikaLib.Input.Joystick.FRY" project="PikaLib.Input" file="a48981e8-48d1-326b-5055-d854e67a531d" />
+        <topic id="P:PikaLib.Input.Joystick.FRZ" project="PikaLib.Input" file="4c1de989-4fd2-260d-e9bb-6e08887b6995" />
+        <topic id="P:PikaLib.Input.Joystick.FX" project="PikaLib.Input" file="c8c560f1-12f2-f9cc-07bb-ccf468911e40" />
+        <topic id="P:PikaLib.Input.Joystick.FY" project="PikaLib.Input" file="e8704a55-5906-c2e5-9ec2-4b6d5fb7fa87" />
+        <topic id="P:PikaLib.Input.Joystick.FZ" project="PikaLib.Input" file="a9de87e2-4ef4-2b2a-6b1f-f3bd17de8089" />
+        <topic id="P:PikaLib.Input.Joystick.InputRange" project="PikaLib.Input" file="1599d703-96a1-224e-b824-785f552de4d2" />
+        <topic id="P:PikaLib.Input.Joystick.NumberAxes" project="PikaLib.Input" file="766159f6-3133-1705-ad5d-a1a43fcfca1d" />
+        <topic id="P:PikaLib.Input.Joystick.NumberButtons" project="PikaLib.Input" file="ec98fb82-2b37-d7bd-b6a2-627c3d006d8f" />
+        <topic id="P:PikaLib.Input.Joystick.NumberPointOfViews" project="PikaLib.Input" file="63705c27-ef5a-4ac6-a7d7-3e5531c43838" />
+        <topic id="P:PikaLib.Input.Joystick.ObjectName" project="PikaLib.Input" file="ac751dba-4e5b-ad2a-4947-542a1c63c4ae" />
+        <topic id="P:PikaLib.Input.Joystick.POV" project="PikaLib.Input" file="daf91b08-b472-5cf4-caed-c895cfa3fed6" />
+        <topic id="P:PikaLib.Input.Joystick.RX" project="PikaLib.Input" file="1b7ab74e-fb8a-1d52-6288-8e579ed03db8" />
+        <topic id="P:PikaLib.Input.Joystick.RY" project="PikaLib.Input" file="7d146012-9ea6-308c-a8f4-516da459c98c" />
+        <topic id="P:PikaLib.Input.Joystick.RZ" project="PikaLib.Input" file="a7753ae6-57de-dc73-a229-a1550eea8f5e" />
+        <topic id="P:PikaLib.Input.Joystick.VRX" project="PikaLib.Input" file="cc61add3-ee1c-1287-1087-f01237e355c4" />
+        <topic id="P:PikaLib.Input.Joystick.VRY" project="PikaLib.Input" file="c160e856-dd9a-1f76-0011-150ebe4d2ca4" />
+        <topic id="P:PikaLib.Input.Joystick.VRZ" project="PikaLib.Input" file="3c738dc0-e7bc-2b35-d1d4-2383b40e210f" />
+        <topic id="P:PikaLib.Input.Joystick.VX" project="PikaLib.Input" file="d0ea1442-884c-72f2-cff6-a52541f57bec" />
+        <topic id="P:PikaLib.Input.Joystick.VY" project="PikaLib.Input" file="fe1ca9ba-a26f-353d-d611-3479876b6c1c" />
+        <topic id="P:PikaLib.Input.Joystick.VZ" project="PikaLib.Input" file="068a918b-a3e2-0a36-5f20-b28c7ce03c24" />
+        <topic id="P:PikaLib.Input.Joystick.X" project="PikaLib.Input" file="7bc05e7f-ecf9-869d-42a4-23aa10be7747" />
+        <topic id="P:PikaLib.Input.Joystick.Y" project="PikaLib.Input" file="3b78f2b8-2263-0f9c-333b-74e26ce1ea47" />
+        <topic id="P:PikaLib.Input.Joystick.Z" project="PikaLib.Input" file="e734839c-d765-2f9c-2448-ba0b55642708" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Input.JoystickAxis" project="PikaLib.Input" file="64946b6b-617f-9120-6f73-bbcfe71a1182" />
+    <topic id="T:PikaLib.Input.JoystickPOV" project="PikaLib.Input" file="2a139ed0-ae7f-2c19-06ab-fab228bf4741" />
+    <topic id="T:PikaLib.Input.Key" project="PikaLib.Input" file="65f3b884-75f1-1ab9-50dc-3695155643a5" />
+    <topic id="T:PikaLib.Input.Keyboard" project="PikaLib.Input" file="ca544248-2646-bb5b-b518-7e61f71ef033">
+      <topic id="M:PikaLib.Input.Keyboard.#ctor(Microsoft.DirectX.DirectInput.Device)" project="PikaLib.Input" file="1c72bc79-2bb2-2348-1740-f7588c8e86db" />
+      <topic id="Fields.T:PikaLib.Input.Keyboard" project="PikaLib.Input" file="36bbadc9-481c-a5a8-eda6-07f14469e1d9">
+        <topic id="F:PikaLib.Input.Keyboard.m_KeyboardState" project="PikaLib.Input" file="449e98c1-b25b-5d00-a710-d310c2d20ad1" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Input.Keyboard" project="PikaLib.Input" file="bcdb7992-d1d8-89e1-10d5-af40507c8722">
+        <topic id="M:PikaLib.Input.Keyboard.ApplyNewState" project="PikaLib.Input" file="b0b2ca7f-7081-7568-544b-2d6ce20a2cfe" />
+        <topic id="Overload:PikaLib.Input.Keyboard.Dispose" project="PikaLib.Input" file="b03bdcb7-88af-f7db-2960-edb83999b11e">
+          <topic id="M:PikaLib.Input.Keyboard.Dispose(System.Boolean)" project="PikaLib.Input" file="5643b844-6b31-beeb-5325-178ab9d80747" />
+        </topic>
+      </topic>
+      <topic id="Properties.T:PikaLib.Input.Keyboard" project="PikaLib.Input" file="c9f714e7-e016-0454-2058-fcee4a4ccea5">
+        <topic id="P:PikaLib.Input.Keyboard.Item(PikaLib.Input.Key)" project="PikaLib.Input" file="c900de0a-d690-8154-e66f-565e8f5db0e0" />
+        <topic id="P:PikaLib.Input.Keyboard.ObjectName" project="PikaLib.Input" file="40303c19-0b98-e275-d0ce-023dfcbfcc9f" />
+      </topic>
+    </topic>
+  </topic>
+  <topic id="N:PikaLib.Net" project="_Namespaces" file="bf2bbe54-6119-80b5-6f96-83857ef2f668">
+    <topic id="T:PikaLib.Net.DataReceivedEventArgs" project="PikaLib.Net" file="af9a63d8-86d4-22eb-a2d0-24cd06cda017">
+      <topic id="M:PikaLib.Net.DataReceivedEventArgs.#ctor(PikaLib.Net.TcpClient,System.Byte[],System.Int32)" project="PikaLib.Net" file="bb7883ec-07d6-e78d-cb60-2f020a490fdf" />
+      <topic id="Methods.T:PikaLib.Net.DataReceivedEventArgs" project="PikaLib.Net" file="c555b56e-1ce6-bddc-6787-6459bc094f33" />
+      <topic id="Properties.T:PikaLib.Net.DataReceivedEventArgs" project="PikaLib.Net" file="3a5e4695-7f35-0532-5701-dbe6e8a9df94">
+        <topic id="P:PikaLib.Net.DataReceivedEventArgs.Client" project="PikaLib.Net" file="2598c046-1411-3bc0-9be9-c1a11192d95f" />
+        <topic id="P:PikaLib.Net.DataReceivedEventArgs.ReceivedData" project="PikaLib.Net" file="ca7e2b69-a9ec-902b-de95-737ca216ac2f" />
+        <topic id="P:PikaLib.Net.DataReceivedEventArgs.ReceivedDataLength" project="PikaLib.Net" file="5cd58b6a-fcf6-18b3-87ac-7c863bc56418" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Net.DataReceivedEventHandler" project="PikaLib.Net" file="e9206a7b-7753-ea1f-8a22-c2ace9bd6b23" />
+    <topic id="T:PikaLib.Net.ServerEventArgs" project="PikaLib.Net" file="f6ab82b9-58af-f80f-73f1-26675a306238">
+      <topic id="M:PikaLib.Net.ServerEventArgs.#ctor(PikaLib.Net.TcpClient)" project="PikaLib.Net" file="7cbe99a5-eb7a-2710-94ba-28db69ae0491" />
+      <topic id="Methods.T:PikaLib.Net.ServerEventArgs" project="PikaLib.Net" file="bb416d54-2928-cd95-b5ab-61c5eafd9c09" />
+      <topic id="Properties.T:PikaLib.Net.ServerEventArgs" project="PikaLib.Net" file="40ca351b-762c-713a-7c7e-373491a8e886">
+        <topic id="P:PikaLib.Net.ServerEventArgs.Client" project="PikaLib.Net" file="329d89b0-bb4e-5688-131c-e0a25ec964e3" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Net.ServerEventHandler" project="PikaLib.Net" file="2aea32b9-d91c-43a1-6fc6-649a97772e0f" />
+    <topic id="T:PikaLib.Net.TcpClient" project="PikaLib.Net" file="8b69117a-18aa-60c1-31fd-86268b1f9c4f">
+      <topic id="Overload:PikaLib.Net.TcpClient.#ctor" project="PikaLib.Net" file="67211166-b5f5-ff1c-8145-7dbd38568d01">
+        <topic id="M:PikaLib.Net.TcpClient.#ctor" project="PikaLib.Net" file="03b00d72-1037-7d5c-ce48-af46250020c6" />
+        <topic id="M:PikaLib.Net.TcpClient.#ctor(System.Int32)" project="PikaLib.Net" file="8aa53bcc-6f23-2d36-cd62-3b71090a5c2a" />
+        <topic id="M:PikaLib.Net.TcpClient.#ctor(System.Net.Sockets.Socket)" project="PikaLib.Net" file="d105c6b2-e754-84be-93c7-0930e276f47d" />
+        <topic id="M:PikaLib.Net.TcpClient.#ctor(System.Net.Sockets.Socket,System.Int32)" project="PikaLib.Net" file="72fece9f-b22e-7bcf-986f-f577e2f90b6e" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Net.TcpClient" project="PikaLib.Net" file="d7e7959f-c317-1f0e-0529-78ab64b2b963">
+        <topic id="M:PikaLib.Net.TcpClient.Close" project="PikaLib.Net" file="5aef32fd-4be6-5e34-06c6-38acd4424006" />
+        <topic id="M:PikaLib.Net.TcpClient.Connect(System.String,System.Int32)" project="PikaLib.Net" file="7a674034-3035-9a89-bb8b-6ac4cb99ad0d" />
+        <topic id="Overload:PikaLib.Net.TcpClient.Dispose" project="PikaLib.Net" file="b849d35a-880a-6a8c-cade-c64337af6d7b">
+          <topic id="M:PikaLib.Net.TcpClient.Dispose" project="PikaLib.Net" file="fdb5210a-9554-0731-481a-ee16e3c1190f" />
+          <topic id="M:PikaLib.Net.TcpClient.Dispose(System.Boolean)" project="PikaLib.Net" file="984d3f60-0583-7cb9-23dd-91d6cb08cb02" />
+        </topic>
+        <topic id="M:PikaLib.Net.TcpClient.OnConnected(System.EventArgs)" project="PikaLib.Net" file="5b78ea7d-9b8a-fad7-85bf-a3b0d217db76" />
+        <topic id="M:PikaLib.Net.TcpClient.OnDataReceived(PikaLib.Net.DataReceivedEventArgs)" project="PikaLib.Net" file="52a92c5a-5539-a3f5-a73a-6883a111a314" />
+        <topic id="M:PikaLib.Net.TcpClient.OnDisconnected(System.EventArgs)" project="PikaLib.Net" file="a77cf19c-f643-6a7f-0bf2-172d772c33aa" />
+        <topic id="Overload:PikaLib.Net.TcpClient.Send" project="PikaLib.Net" file="c7d38f76-5d60-76c2-f815-015812badc16">
+          <topic id="M:PikaLib.Net.TcpClient.Send(System.Byte[])" project="PikaLib.Net" file="d7ba96df-eae0-3dc8-f60b-11da45678348" />
+          <topic id="M:PikaLib.Net.TcpClient.Send(System.Byte[],System.Int32,System.Int32)" project="PikaLib.Net" file="3c1cd11c-c66b-2f6f-abe6-e4bca937e5d0" />
+        </topic>
+        <topic id="M:PikaLib.Net.TcpClient.StartReceive" project="PikaLib.Net" file="46607813-5051-2d8c-0d21-498a19e1f21c" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Net.TcpClient" project="PikaLib.Net" file="22e957e2-ced9-b992-411b-cc9a581c2fba">
+        <topic id="P:PikaLib.Net.TcpClient.Client" project="PikaLib.Net" file="f93d1b12-3310-0103-0aa5-abacdc1a9b20" />
+        <topic id="P:PikaLib.Net.TcpClient.IsClosed" project="PikaLib.Net" file="7168945d-8605-6f8f-daa3-6324e7ebb5cd" />
+        <topic id="P:PikaLib.Net.TcpClient.LocalEndPoint" project="PikaLib.Net" file="cd8c6873-d58d-1fa5-e643-6c6864ed7c30" />
+        <topic id="P:PikaLib.Net.TcpClient.ReceiveBufferSize" project="PikaLib.Net" file="051dc41e-b92d-9575-1c18-515ed9913d27" />
+        <topic id="P:PikaLib.Net.TcpClient.RemoteEndPoint" project="PikaLib.Net" file="ace9abb3-c13a-e3f9-47f2-4120ec0e9354" />
+      </topic>
+      <topic id="Events.T:PikaLib.Net.TcpClient" project="PikaLib.Net" file="52ea96be-d99e-62e8-7cef-770955a8f75c">
+        <topic id="E:PikaLib.Net.TcpClient.Connected" project="PikaLib.Net" file="c0349131-242f-2562-8a6c-ce53b246ff8f" />
+        <topic id="E:PikaLib.Net.TcpClient.DataReceived" project="PikaLib.Net" file="f4930f1f-9c80-7b5c-a07c-d9aa8815bc5f" />
+        <topic id="E:PikaLib.Net.TcpClient.Disconnected" project="PikaLib.Net" file="4e601842-6051-fe1c-a7a1-cb72351557fa" />
+      </topic>
+    </topic>
+    <topic id="T:PikaLib.Net.TcpServer" project="PikaLib.Net" file="87843514-3e99-57e8-fd8e-f199d4c84303">
+      <topic id="Overload:PikaLib.Net.TcpServer.#ctor" project="PikaLib.Net" file="0ffe9880-206d-2381-28e2-b3c77fc758c9">
+        <topic id="M:PikaLib.Net.TcpServer.#ctor" project="PikaLib.Net" file="9ba545a8-5522-e242-478a-cbf1d95828e1" />
+        <topic id="M:PikaLib.Net.TcpServer.#ctor(System.Int32)" project="PikaLib.Net" file="753e0484-ca72-0196-4ded-3450f10d99bc" />
+      </topic>
+      <topic id="Fields.T:PikaLib.Net.TcpServer" project="PikaLib.Net" file="8bf2c11c-7aaa-cd44-b56e-6d4a742907e6">
+        <topic id="F:PikaLib.Net.TcpServer.m_AcceptedClients" project="PikaLib.Net" file="46af4283-01f0-1eb0-dd82-cba9c181be2b" />
+      </topic>
+      <topic id="Methods.T:PikaLib.Net.TcpServer" project="PikaLib.Net" file="7b7057b6-8a1b-a0f1-06ce-b2c253ee6b2c">
+        <topic id="M:PikaLib.Net.TcpServer.Close" project="PikaLib.Net" file="f58f5e65-6761-24bb-0c29-c05c73d33c90" />
+        <topic id="M:PikaLib.Net.TcpServer.CloseAllClients" project="PikaLib.Net" file="8318bf96-e2bf-a5ad-659d-c87e7f7618f6" />
+        <topic id="M:PikaLib.Net.TcpServer.CloseClient(PikaLib.Net.TcpClient)" project="PikaLib.Net" file="47de35c7-a74e-839e-1681-09255f76dcb8" />
+        <topic id="M:PikaLib.Net.TcpServer.CreateClient(System.Net.Sockets.Socket)" project="PikaLib.Net" file="11f4d3f0-4d8f-8597-7689-f5458fd09367" />
+        <topic id="Overload:PikaLib.Net.TcpServer.Dispose" project="PikaLib.Net" file="b3cb294b-d7b2-e053-f6cd-a7685cb759c9">
+          <topic id="M:PikaLib.Net.TcpServer.Dispose" project="PikaLib.Net" file="6356350d-b935-f493-ca4b-7d684b31a1ca" />
+          <topic id="M:PikaLib.Net.TcpServer.Dispose(System.Boolean)" project="PikaLib.Net" file="58748e0b-d8a1-c8a9-53ff-c42fd7930ff1" />
+        </topic>
+        <topic id="Overload:PikaLib.Net.TcpServer.Listen" project="PikaLib.Net" file="e9d2da92-01fd-293a-f688-32930902a12e">
+          <topic id="M:PikaLib.Net.TcpServer.Listen(System.Int32)" project="PikaLib.Net" file="0babdfb5-89c2-8555-9147-8c4b0ff2083e" />
+          <topic id="M:PikaLib.Net.TcpServer.Listen(System.Int32,System.Int32)" project="PikaLib.Net" file="7e678bc8-d7bd-b431-ac39-3e38e7dafea9" />
+        </topic>
+        <topic id="M:PikaLib.Net.TcpServer.OnClientAccepted(PikaLib.Net.ServerEventArgs)" project="PikaLib.Net" file="0f95a832-bfa1-a686-db16-aee0abd7b7e6" />
+        <topic id="M:PikaLib.Net.TcpServer.OnClientDisconnected(PikaLib.Net.ServerEventArgs)" project="PikaLib.Net" file="17e5f822-2c8f-c724-27d7-f86aca3904de" />
+        <topic id="M:PikaLib.Net.TcpServer.OnDataReceived(PikaLib.Net.DataReceivedEventArgs)" project="PikaLib.Net" file="a99c3cd0-001d-e1e5-65ad-cf73ef1d047c" />
+        <topic id="Overload:PikaLib.Net.TcpServer.SendToAllClients" project="PikaLib.Net" file="36e127da-674b-461a-85c3-2da4d686d17f">
+          <topic id="M:PikaLib.Net.TcpServer.SendToAllClients(System.Byte[])" project="PikaLib.Net" file="f22bba39-0bbc-4edc-3d80-543818e2a7f2" />
+          <topic id="M:PikaLib.Net.TcpServer.SendToAllClients(System.Byte[],System.Int32,System.Int32)" project="PikaLib.Net" file="22c96e56-7b79-b5d3-82e8-5c26491ac97f" />
+        </topic>
+        <topic id="M:PikaLib.Net.TcpServer.StopListen" project="PikaLib.Net" file="3a59e005-b58f-6d0e-780a-e5db59f5218b" />
+      </topic>
+      <topic id="Properties.T:PikaLib.Net.TcpServer" project="PikaLib.Net" file="dd3d17f5-d9a8-fc4b-8913-c48f0cdec85d">
+        <topic id="P:PikaLib.Net.TcpServer.AcceptedClients" project="PikaLib.Net" file="ced5b79c-2b82-ccd3-8861-cca184e2d896" />
+        <topic id="P:PikaLib.Net.TcpServer.IsListening" project="PikaLib.Net" file="acddb59a-1a3d-6237-af79-6b4d3e6bafd1" />
+        <topic id="P:PikaLib.Net.TcpServer.LocalEndPoint" project="PikaLib.Net" file="85c214f6-e6bd-a3bc-86b6-ab393dedc870" />
+        <topic id="P:PikaLib.Net.TcpServer.MaxClients" project="PikaLib.Net" file="4476f050-ee95-1081-880a-68066124d1f1" />
+        <topic id="P:PikaLib.Net.TcpServer.Server" project="PikaLib.Net" file="33a6007c-74fa-2538-e2cf-983dc2465aa7" />
+      </topic>
+      <topic id="Events.T:PikaLib.Net.TcpServer" project="PikaLib.Net" file="2d8965ce-3f25-dfd9-fffc-249349c5b16e">
+        <topic id="E:PikaLib.Net.TcpServer.ClientAccepted" project="PikaLib.Net" file="e41d2c1c-626e-bc33-618b-6fb50a82056d" />
+        <topic id="E:PikaLib.Net.TcpServer.ClientDisconnected" project="PikaLib.Net" file="7cddc658-fcac-c810-34c9-79067cdafda3" />
+        <topic id="E:PikaLib.Net.TcpServer.DataReceived" project="PikaLib.Net" file="488ee3d2-1bc8-a4fc-b694-0a0a800db895" />
+      </topic>
+    </topic>
+  </topic>
+</topics>

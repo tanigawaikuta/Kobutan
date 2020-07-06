@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PikaLib</name>
+    </assembly>
+    <members>
+        <member name="T:PikaLib.UninitializedException">
+            <summary>
+            初期化が必要なオブジェクトにおいて、初期化せずに使用された場合にスローされる例外。
+            </summary>
+        </member>
+        <member name="M:PikaLib.UninitializedException.#ctor">
+            <summary>
+            PikaLib.UninitializedException クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.UninitializedException.#ctor(System.String)">
+            <summary>
+            指定したエラーメッセージを使用して、
+            PikaLib.UninitializedException クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:PikaLib.UninitializedException.#ctor(System.String,System.Exception)">
+            <summary>
+            指定したエラーメッセージと、この例外の原因である内部例外への参照を使用して、
+            PikaLib.UninitializedException クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+            <param name="innerException">現在の例外の原因である例外。内部例外が指定されていない場合はnullを返す。</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PikaLib.Net</name>
+    </assembly>
+    <members>
+        <member name="T:PikaLib.Net.TcpClient">
+            <summary>
+            TCPクライアント。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpClient.m_StartedReceiving">
+            <summary>受信開始フラグ。</summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpClient.m_Disposed">
+            <summary>すでに破棄済みかどうかを表すフラグ。</summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpClient.m_SyncSocket">
+            <summary>スレッド間の同期用。</summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.OnConnected(System.EventArgs)">
+            <summary>
+            PikaLib.Net.TcpClient.Connected イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している System.EventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.OnDataReceived(PikaLib.Net.DataReceivedEventArgs)">
+            <summary>
+            PikaLib.Net.TcpClient.DataReceived イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している PikaLib.Net.DataReceivedEventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.OnDisconnected(System.EventArgs)">
+            <summary>
+            PikaLib.Net.TcpClient.Disconnected イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している System.EventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.#ctor">
+            <summary>
+            PikaLib.Net.TcpClient クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.#ctor(System.Int32)">
+            <summary>
+            受信バッファサイズを使用して、
+            PikaLib.Net.TcpClient クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="receiveBufferSize">受信バッファサイズ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            元となるソケットを使用して、
+            PikaLib.Net.TcpClient クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="soc">元となるソケット。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.#ctor(System.Net.Sockets.Socket,System.Int32)">
+            <summary>
+            元となるソケットと受信バッファサイズを使用して、
+            PikaLib.Net.TcpClient クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="soc">元となるソケット。</param>
+            <param name="receiveBufferSize">受信バッファサイズ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Connect(System.String,System.Int32)">
+            <summary>
+            サーバーに接続します。
+            </summary>
+            <param name="host">ホスト名。</param>
+            <param name="port">ポート番号。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Close">
+            <summary>
+            サーバーとの接続を閉じ、リソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Send(System.Byte[])">
+            <summary>
+            サーバーにデータを送信します。
+            </summary>
+            <param name="data">送信するデータ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            サーバーにデータを送信します。
+            </summary>
+            <param name="data">送信するデータ。</param>
+            <param name="offset">オフセット。</param>
+            <param name="size">サイズ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.StartReceive">
+            <summary>
+            データの非同期受信を開始します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.ReceiveDataCallback(System.IAsyncResult)">
+            <summary>
+            BeginReceiveのコールバック。
+            </summary>
+            <param name="ar">非同期操作のステータス。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Dispose">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpClient.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Net.TcpClient.Client">
+            <summary>
+            基になるSocketを取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpClient.LocalEndPoint">
+            <summary>
+            ローカルエンドポイントを取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpClient.RemoteEndPoint">
+            <summary>
+            リモートエンドポイントを取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpClient.ReceiveBufferSize">
+            <summary>
+            受信バッファサイズを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpClient.IsClosed">
+            <summary>
+            閉じているかどうかの真偽値を取得します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpClient.Connected">
+            <summary>
+            サーバーに接続した際に発生します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpClient.DataReceived">
+            <summary>
+            データを受信した際に発生します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpClient.Disconnected">
+            <summary>
+            サーバーから切断された、あるいは切断した際に発生します。
+            </summary>
+        </member>
+        <member name="T:PikaLib.Net.TcpServer">
+            <summary>
+            TCPサーバー。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpServer.m_AcceptedClients">
+            <summary>接続中のクライアントリスト。</summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpServer.m_Disposed">
+            <summary>すでに破棄済みかどうかを表すフラグ。</summary>
+        </member>
+        <member name="F:PikaLib.Net.TcpServer.m_SyncSocket">
+            <summary>スレッド間の同期用。</summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.OnClientAccepted(PikaLib.Net.ServerEventArgs)">
+            <summary>
+            PikaLib.Net.TcpServer.ClientAccepted イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している PikaLib.Net.ServerEventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.OnDataReceived(PikaLib.Net.DataReceivedEventArgs)">
+            <summary>
+            PikaLib.Net.TcpServer.DataReceived イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している PikaLib.Net.DataReceivedEventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.OnClientDisconnected(PikaLib.Net.ServerEventArgs)">
+            <summary>
+            PikaLib.Net.TcpServer.ClientDisconnected イベントを発生させます。
+            </summary>
+            <param name="e">イベントデータを格納している PikaLib.Net.ServerEventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.#ctor">
+            <summary>
+            PikaLib.Net.TcpServer クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.#ctor(System.Int32)">
+            <summary>
+            同時接続を許可するクライアント数を使用して、
+            PikaLib.Net.TcpServer クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="maxClients">同時接続を許可するクライアント数。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.Listen(System.Int32)">
+            <summary>
+            Listenを開始します。
+            </summary>
+            <param name="portNum">ポート番号。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.Listen(System.Int32,System.Int32)">
+            <summary>
+            Listenを開始します。
+            </summary>
+            <param name="portNum">ポート番号。</param>
+            <param name="backlog">保留中の接続のキューの最大長。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.Close">
+            <summary>
+            接続を閉じ、リソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.CloseClient(PikaLib.Net.TcpClient)">
+            <summary>
+            指定したクライアントとの通信を閉じます。
+            </summary>
+            <param name="client">通信を閉じたいクライアント。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.CloseAllClients">
+            <summary>
+            接続中のすべてのクライアントとの通信を閉じます。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.SendToAllClients(System.Byte[])">
+            <summary>
+            全てのクライアントにデータを送信します。
+            </summary>
+            <param name="data">送信するデータ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.SendToAllClients(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            全てのクライアントにデータを送信します。
+            </summary>
+            <param name="data">送信するデータ。</param>
+            <param name="offset">オフセット。</param>
+            <param name="size">サイズ。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.CreateClient(System.Net.Sockets.Socket)">
+            <summary>
+            サーバーで使用するクライアントクラスを作成します。
+            </summary>
+            <param name="soc">基になるSocket。</param>
+            <returns>クライアントクラス。</returns>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.StopListen">
+            <summary>
+            監視を中止します (復帰不可)。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.AcceptCallback(System.IAsyncResult)">
+            <summary>
+            BeginAcceptのコールバック。
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.client_Disconnected(System.Object,System.EventArgs)">
+            <summary>
+            クライアントが切断した時のイベントハンドラ。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントデータを格納している System.EventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.client_DataReceived(System.Object,PikaLib.Net.DataReceivedEventArgs)">
+            <summary>
+            クライアントからデータを受信した時のイベントハンドラ。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントデータを格納している PikaLib.Net.DataReceivedEventArgs。</param>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.Dispose">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.TcpServer.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Net.TcpServer.Server">
+            <summary>
+            基になるSocketを取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpServer.IsListening">
+            <summary>
+            Listening状態かどうかを取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpServer.LocalEndPoint">
+            <summary>
+            ローカルエンドポイントを取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpServer.MaxClients">
+            <summary>
+            同時接続を許可するクライアント数を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Net.TcpServer.AcceptedClients">
+            <summary>
+            接続中のクライアントを取得します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpServer.ClientAccepted">
+            <summary>
+            クライアントを受け入れた際に発生します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpServer.DataReceived">
+            <summary>
+            クライアントからデータを受信した際に発生します。
+            </summary>
+        </member>
+        <member name="E:PikaLib.Net.TcpServer.ClientDisconnected">
+            <summary>
+            クライアントから切断された際に発生します。
+            </summary>
+        </member>
+        <member name="T:PikaLib.Net.ServerEventHandler">
+            <summary>
+            TcpServerクラスで発生するイベントを処理するメソッドのデリゲート。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントデータを格納している PikaLib.Net.ServerEventArgs。</param>
+        </member>
+        <member name="T:PikaLib.Net.ServerEventArgs">
+            <summary>
+            ServerEventHandlerのイベントデータを格納するクラス。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.ServerEventArgs.#ctor(PikaLib.Net.TcpClient)">
+            <summary>
+            クライアントを使用して、
+            PikaLib.Net.ServerEventArgs クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="client">クライアント</param>
+        </member>
+        <member name="P:PikaLib.Net.ServerEventArgs.Client">
+            <summary>クライアントを取得します。</summary>
+        </member>
+        <member name="T:PikaLib.Net.DataReceivedEventHandler">
+            <summary>
+            データ受信時に発生するイベントを処理するメソッドのデリゲート。
+            </summary>
+            <param name="sender">イベントのソース。</param>
+            <param name="e">イベントデータを格納している PikaLib.Net.DataReceivedEventArgs。</param>
+        </member>
+        <member name="T:PikaLib.Net.DataReceivedEventArgs">
+            <summary>
+            DataReceivedEventHandlerのイベントデータを格納するクラス。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Net.DataReceivedEventArgs.#ctor(PikaLib.Net.TcpClient,System.Byte[],System.Int32)">
+            <summary>
+            クライアント、受信データ、受信データの長さを使用して、
+            PikaLib.Net.DataReceivedEventArgs クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="client">クライアント。</param>
+            <param name="receivedData">受信データ。</param>
+            <param name="receivedDataLength">受信データの長さ。</param>
+        </member>
+        <member name="P:PikaLib.Net.DataReceivedEventArgs.Client">
+            <summary>クライアントを取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Net.DataReceivedEventArgs.ReceivedData">
+            <summary>受信データを取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Net.DataReceivedEventArgs.ReceivedDataLength">
+            <summary>受信データの長さを取得します。</summary>
+        </member>
+    </members>
+</doc>

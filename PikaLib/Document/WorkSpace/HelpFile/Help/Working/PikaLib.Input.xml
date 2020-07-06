@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PikaLib.Input</name>
+    </assembly>
+    <members>
+        <member name="T:PikaLib.Input.InputDevice">
+            <summary>
+            入力デバイス。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.InputDevice.m_Device">
+            <summary>DirectInputのデバイス。</summary>
+        </member>
+        <member name="F:PikaLib.Input.InputDevice.m_Disposed">
+            <summary>すでに破棄済みかどうかを表すフラグ。</summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.#ctor(Microsoft.DirectX.DirectInput.Device)">
+            <summary>
+            DirectInputのデバイスを使って、
+            PikaLib.Input.InputDevice クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="device">DirectInputのデバイス。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.Acquire">
+            <summary>
+            アクセス権を取得します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.Unacquire">
+            <summary>
+            アクセス権を解放します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.UpdateState">
+            <summary>
+            状態を更新します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.ApplyNewState">
+            <summary>
+            最新状態を適用します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.Dispose">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDevice.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Input.InputDevice.ObjectName">
+            <summary>
+            オブジェクト名
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDevice.ProductName">
+            <summary>
+            製品名を取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDevice.ProductGuid">
+            <summary>
+            製品 GUID を取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDevice.InstanceName">
+            <summary>
+            インスタンス名を取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDevice.InstanceGuid">
+            <summary>
+            インスタンス GUID を取得します。
+            </summary>
+        </member>
+        <member name="T:PikaLib.Input.InputRange">
+            <summary>
+            入力範囲。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.InputRange.m_Max">
+            <summary>入力範囲の最大値。</summary>
+        </member>
+        <member name="F:PikaLib.Input.InputRange.m_Min">
+            <summary>入力範囲の最小値。</summary>
+        </member>
+        <member name="M:PikaLib.Input.InputRange.#ctor(System.Int32,System.Int32)">
+            <summary>
+            入力範囲の最小値、最大値を使用して、
+            PikaLib.Input.InputRange クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="minimumRange">入力範囲の最小値。</param>
+            <param name="maximumRange">入力範囲の最大値。</param>
+        </member>
+        <member name="P:PikaLib.Input.InputRange.Max">
+            <summary>入力範囲の最大値を取得または設定します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.InputRange.Min">
+            <summary>入力範囲の最小値を取得または設定します。</summary>
+        </member>
+        <member name="T:PikaLib.Input.CooperativeLevelFlags">
+            <summary>
+            他のインスタンス、およびシステムとの間でどのように対話するかを決定するフラグ。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.CooperativeLevelFlags.Exclusive">
+            <summary>他のアプリケーションにデバイスへのアクセス権が無くなります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.CooperativeLevelFlags.NonExclusive">
+            <summary>他のアプリケーションもデバイスへアクセス可能です。</summary>
+        </member>
+        <member name="F:PikaLib.Input.CooperativeLevelFlags.Foreground">
+            <summary>アクティブ時限定で値の取得が可能です。</summary>
+        </member>
+        <member name="F:PikaLib.Input.CooperativeLevelFlags.Background">
+            <summary>非アクティブ時でも値の所得が可能です。</summary>
+        </member>
+        <member name="F:PikaLib.Input.CooperativeLevelFlags.NoWindowsKey">
+            <summary>キー無効化。</summary>
+        </member>
+        <member name="T:PikaLib.Input.Key">
+            <summary>
+            キーボードのキーの種類。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Escape">
+            <summary>Esc キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D1">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D2">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D3">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D4">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D5">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D6">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D7">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D8">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D9">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D0">
+            <summary>さまざまな文字に使用されます。キーボードによって異なる場合があります。</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Minus">
+            <summary>減算記号 (-) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Equals">
+            <summary>等号 (=) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.BackSpace">
+            <summary>BackSpace キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Back">
+            <summary>BackSpace キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Tab">
+            <summary>Tab キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Q">
+            <summary>Q キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.W">
+            <summary>W キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.E">
+            <summary>E キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.R">
+            <summary>R キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.T">
+            <summary>T キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Y">
+            <summary>Y キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.U">
+            <summary>U キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.I">
+            <summary>I キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.O">
+            <summary>O キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.P">
+            <summary>P キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftBracket">
+            <summary>[ キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightBracket">
+            <summary>] キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Return">
+            <summary>Return キー (Enterキー)</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftControl">
+            <summary>左Ctrl キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.A">
+            <summary>A キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.S">
+            <summary>S キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.D">
+            <summary>D キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F">
+            <summary>F キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.G">
+            <summary>G キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.H">
+            <summary>H キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.J">
+            <summary>J キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.K">
+            <summary>K キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.L">
+            <summary>L キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.SemiColon">
+            <summary>セミコロン (;) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Apostrophe">
+            <summary>アポストロフィー (') キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Grave">
+            <summary>グレイヴ (`) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftShift">
+            <summary>左Shift キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.BackSlash">
+            <summary>バックスラッシュ (\) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Z">
+            <summary>Z キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.X">
+            <summary>X キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.C">
+            <summary>C キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.V">
+            <summary>V キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.B">
+            <summary>B キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.N">
+            <summary>N キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.M">
+            <summary>M キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Comma">
+            <summary>カンマ (,) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Period">
+            <summary>ピリオド (.) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Slash">
+            <summary>スラッシュ (/) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightShift">
+            <summary>右Shift キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadStar">
+            <summary>NumPadStar (*) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Multiply">
+            <summary>乗算記号 (*) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftMenu">
+            <summary>LeftMenu キー (左Alt)</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftAlt">
+            <summary>左Alt キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Space">
+            <summary>スペース キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Capital">
+            <summary>Capital キー (CapsLock)</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.CapsLock">
+            <summary>CapsLock キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F1">
+            <summary>F1 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F2">
+            <summary>F2 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F3">
+            <summary>F3 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F4">
+            <summary>F4 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F5">
+            <summary>F5 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F6">
+            <summary>F6 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F7">
+            <summary>F7 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F8">
+            <summary>F8 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F9">
+            <summary>F9 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F10">
+            <summary>F10 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Numlock">
+            <summary>Numlock キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Scroll">
+            <summary>Scroll キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad7">
+            <summary>数値キーパッドの 7 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad8">
+            <summary>数値キーパッドの 8 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad9">
+            <summary>数値キーパッドの 9 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadMinus">
+            <summary>数値キーパッドの 減算記号(-) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Subtract">
+            <summary>減算記号 (-) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad4">
+            <summary>数値キーパッドの 4 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad5">
+            <summary>数値キーパッドの 5 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad6">
+            <summary>数値キーパッドの 6 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadPlus">
+            <summary>数値キーパッドの 加算記号(+) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Add">
+            <summary>加算記号 (+) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad1">
+            <summary>数値キーパッドの 1 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad2">
+            <summary>数値キーパッドの 2 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad3">
+            <summary>数値キーパッドの 3 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPad0">
+            <summary>数値キーパッドの 0 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadPeriod">
+            <summary>数値キーパッドの ピリオド(.) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Decimal">
+            <summary>小数点 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.OEM102">
+            <summary>OEM102 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F11">
+            <summary>F11 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F12">
+            <summary>F12 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F13">
+            <summary>F13 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F14">
+            <summary>F14 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.F15">
+            <summary>F15 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Kana">
+            <summary>かな キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.AbntC1">
+            <summary>AbntC1 (ブラジル) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Convert">
+            <summary>変換 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NoConvert">
+            <summary>無変換 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Yen">
+            <summary>Yen キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.AbntC2">
+            <summary>AbntC2 (ブラジル) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadEquals">
+            <summary>数値キーパッドの 等号(=) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Circumflex">
+            <summary>サーカムフレックス (^) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.PrevTrack">
+            <summary>PrevTrack キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.At">
+            <summary>At キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Colon">
+            <summary>コロン (:) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Underline">
+            <summary>アンダーライン (_) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Kanji">
+            <summary>漢字 キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Stop">
+            <summary>Stop キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.AX">
+            <summary>AX キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Unlabeled">
+            <summary>ラベルなし キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NextTrack">
+            <summary>NextTrack キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadEnter">
+            <summary>数値キーパッドの Enter キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightControl">
+            <summary>右Ctrl キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Mute">
+            <summary>Mute キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Calculator">
+            <summary>Calculator キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.PlayPause">
+            <summary>PlayPause キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.MediaStop">
+            <summary>MediaStop キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.VolumeDown">
+            <summary>VolumeDown キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.VolumeUp">
+            <summary>VolumeUp キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebHome">
+            <summary>WebHome キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadComma">
+            <summary>数値キーパッドの コンマ(,) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Divide">
+            <summary>除算記号 (/) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.NumPadSlash">
+            <summary>数値キーパッドの スラッシュ キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.SysRq">
+            <summary>SysRq キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightMenu">
+            <summary>RightMenu キー (右Alt)</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightAlt">
+            <summary>右Alt キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Pause">
+            <summary>Pause キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Home">
+            <summary>Home キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.UpArrow">
+            <summary>上矢印 (↑) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Up">
+            <summary>上矢印 (↑) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Prior">
+            <summary>Prior</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.PageUp">
+            <summary>PageUp</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Left">
+            <summary>左矢印 (←) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftArrow">
+            <summary>左矢印 (←) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Right">
+            <summary>右矢印 (→) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightArrow">
+            <summary>右矢印 (→) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.End">
+            <summary>End</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.DownArrow">
+            <summary>下矢印 (↓) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Down">
+            <summary>下矢印 (↓) キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Next">
+            <summary>Next キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.PageDown">
+            <summary>PageDown キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Insert">
+            <summary>Insert キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Delete">
+            <summary>Delete キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.LeftWindows">
+            <summary>LeftWindows キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.RightWindows">
+            <summary>RightWindows キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Apps">
+            <summary>Apps キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Power">
+            <summary>Power キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Sleep">
+            <summary>Sleep キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Wake">
+            <summary>Wake キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebSearch">
+            <summary>WebSearch キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebFavorites">
+            <summary>WebFavorites キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebRefresh">
+            <summary>WebRefresh キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebStop">
+            <summary>WebStop キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebForward">
+            <summary>WebForward キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.WebBack">
+            <summary>WebBack キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.MyComputer">
+            <summary>MyComputer キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.Mail">
+            <summary>Mail キー</summary>
+        </member>
+        <member name="F:PikaLib.Input.Key.MediaSelect">
+            <summary>MediaSelect キー</summary>
+        </member>
+        <member name="T:PikaLib.Input.InputDeviceManager">
+            <summary>
+            入力デバイスマネージャ。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.InputDeviceManager.m_Joysticks">
+            <summary>ジョイスティック。</summary>
+        </member>
+        <member name="F:PikaLib.Input.InputDeviceManager.m_Disposed">
+            <summary>すでに破棄済みかどうかを表すフラグ。</summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.#ctor">
+            <summary>
+            PikaLib.Input.InputDeviceManager クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeAllInputDevices">
+            <summary>
+            ジョイスティック, キーボード, マウスを初期化します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks">
+            <summary>
+            ジョイスティックを初期化します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(System.IntPtr,PikaLib.Input.CooperativeLevelFlags)">
+            <summary>
+            ジョイスティックを初期化します。
+            </summary>
+            <param name="hwnd">ウィンドウハンドル (BackgroundではnullでOK)。</param>
+            <param name="flags">他のインスタンス、およびシステムとの間でどのように対話するかを決定するフラグ。</param>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(PikaLib.Input.InputRange)">
+            <summary>
+            ジョイスティックを初期化します。
+            </summary>
+            <param name="inputRange">入力範囲。</param>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeJoysticks(System.IntPtr,PikaLib.Input.CooperativeLevelFlags,PikaLib.Input.InputRange)">
+            <summary>
+            ジョイスティックを初期化します。
+            </summary>
+            <param name="hwnd">ウィンドウハンドル (BackgroundではnullでOK)。</param>
+            <param name="flags">他のインスタンス、およびシステムとの間でどのように対話するかを決定するフラグ。</param>
+            <param name="inputRange">入力範囲。</param>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeKeyboards">
+            <summary>
+            キーボードを初期化します。
+            </summary>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.InitializeKeyboards(System.IntPtr,PikaLib.Input.CooperativeLevelFlags)">
+            <summary>
+            キーボードを初期化します。
+            </summary>
+            <param name="hwnd">ウィンドウハンドル (BackgroundではnullでOK)。</param>
+            <param name="flags">他のインスタンス、およびシステムとの間でどのように対話するかを決定するフラグ。</param>
+            <exception cref="T:PikaLib.Input.InputException">DirectInput において例外が投げられた際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.UpdateAllDeviceState">
+            <summary>
+            全てのデバイスの状態を更新します。
+            </summary>
+            <exception cref="T:PikaLib.NotInitializedException">初期化前に呼び出された際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.UpdateJoysticksState">
+            <summary>
+            ジョイスティックの状態を更新します。
+            </summary>
+            <exception cref="T:PikaLib.NotInitializedException">初期化前に呼び出された際に発生します。</exception>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.CreateDevice(System.Guid,System.IntPtr,PikaLib.Input.CooperativeLevelFlags,PikaLib.Input.InputRange)">
+            <summary>
+            DirectInputのデバイスを作成します。
+            </summary>
+            <param name="instanceGuid">インスタンス GUID。</param>
+            <param name="hwnd">ウィンドウハンドル (BackgroundではnullでOK)。</param>
+            <param name="flags">他のインスタンス、およびシステムとの間でどのように対話するかを決定するフラグ。</param>
+            <param name="inputRange">入力範囲。</param>
+            <returns>DirectInputのデバイス。</returns>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.DisposeJoystics">
+            <summary>
+            現在のジョイスティックを全て処分します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.DisposeKeybord">
+            <summary>
+            キーボードを処分します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.Dispose">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputDeviceManager.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Input.InputDeviceManager.Joysticks">
+            <summary>ジョイスティックの配列を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDeviceManager.NumberJoysticks">
+            <summary>ジョイスティックの数を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.InputDeviceManager.Keyboard">
+            <summary>キーボードを取得します。</summary>
+        </member>
+        <member name="T:PikaLib.Input.Joystick">
+            <summary>
+            ジョイスティック。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.Joystick.m_JoystickState">
+            <summary>
+            ジョイスティックの状態。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.Joystick.m_Disposed">
+            <summary>
+            すでに破棄済みかどうかを表すフラグ。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.#ctor(Microsoft.DirectX.DirectInput.Device)">
+            <summary>
+            DirectInputのデバイスを使って、
+            PikaLib.Input.Joystick クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="device">DirectInputのデバイス。</param>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.GetJoystickPOV(System.Int32)">
+            <summary>
+            PoVハットの状態を取得します。
+            </summary>
+            <param name="povID">取得するPoVハットのID。</param>
+            <returns>ハットスイッチの状態。</returns>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.GetAnalogStick(PikaLib.Input.JoystickAxis)">
+            <summary>
+            アナログスティックの状態を取得します。
+            </summary>
+            <param name="axis">取得したい軸の種類。</param>
+            <returns>アナログスティックの状態。</returns>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.IsButtonPush(System.Int32)">
+            <summary>
+            指定されたボタンが押されているかを判定します。
+            </summary>
+            <param name="buttonID">調べるボタンのID。</param>
+            <returns>押されているかどうかの真偽値。</returns>
+            <exception cref="T:System.ObjectDisposedException">すでに破棄されているのに呼び出された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.ApplyNewState">
+            <summary>
+            最新状態を適用します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.Joystick.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.ObjectName">
+            <summary>
+            オブジェクト名
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.NumberAxes">
+            <summary>
+            軸の数を取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.NumberButtons">
+            <summary>ボタンの数を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.NumberPointOfViews">
+            <summary>
+            PoVハットの数を取得します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.InputRange">
+            <summary>
+            アナログスティックの入力範囲を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.POV">
+            <summary>PoVハットを取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.X">
+            <summary>アナログスティック X を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.Y">
+            <summary>アナログスティック Y を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.Z">
+            <summary>アナログスティック Z を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.RX">
+            <summary>アナログスティック RX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.RY">
+            <summary>アナログスティック RY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.RZ">
+            <summary>アナログスティック RZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.AX">
+            <summary>アナログスティック AX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.AY">
+            <summary>アナログスティック AY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.AZ">
+            <summary>アナログスティック AZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.ARX">
+            <summary>アナログスティック ARX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.ARY">
+            <summary>アナログスティック ARY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.ARZ">
+            <summary>アナログスティック ARZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FX">
+            <summary>アナログスティック FX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FY">
+            <summary>アナログスティック FY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FZ">
+            <summary>アナログスティック FZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FRX">
+            <summary>アナログスティック FRX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FRY">
+            <summary>アナログスティック FRY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.FRZ">
+            <summary>アナログスティック FRZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VX">
+            <summary>アナログスティック VX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VY">
+            <summary>アナログスティック VY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VZ">
+            <summary>アナログスティック VZ を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VRX">
+            <summary>アナログスティック VRX を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VRY">
+            <summary>アナログスティック VRY を取得します。</summary>
+        </member>
+        <member name="P:PikaLib.Input.Joystick.VRZ">
+            <summary>アナログスティック VRZ を取得します。</summary>
+        </member>
+        <member name="T:PikaLib.Input.JoystickAxis">
+            <summary>
+            アナログスティックの軸名称。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_NONE">
+            <summary>アナログスティック無し。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_X">
+            <summary>アナログスティック X。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_Y">
+            <summary>アナログスティック Y。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_Z">
+            <summary>アナログスティック Z。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_RX">
+            <summary>アナログスティック RX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_RY">
+            <summary>アナログスティック RY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_RZ">
+            <summary>アナログスティック RZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_AX">
+            <summary>アナログスティック AX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_AY">
+            <summary>アナログスティック AY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_AZ">
+            <summary>アナログスティック AZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_ARX">
+            <summary>アナログスティック ARX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_ARY">
+            <summary>アナログスティック ARY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_ARZ">
+            <summary>アナログスティック ARZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FX">
+            <summary>アナログスティック FX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FY">
+            <summary>アナログスティック FY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FZ">
+            <summary>アナログスティック FZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FRX">
+            <summary>アナログスティック FRX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FRY">
+            <summary>アナログスティック FRY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_FRZ">
+            <summary>アナログスティック FRZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VX">
+            <summary>アナログスティック VX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VY">
+            <summary>アナログスティック VY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VZ">
+            <summary>アナログスティック VZ。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VRX">
+            <summary>アナログスティック VRX。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VRY">
+            <summary>アナログスティック VRY。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickAxis.AXIS_VRZ">
+            <summary>アナログスティック VRZ。</summary>
+        </member>
+        <member name="T:PikaLib.Input.JoystickPOV">
+            <summary>
+            PoVハットの状態。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_NONE">
+            <summary>押されていない状態。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_UP">
+            <summary>上。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_RIGHT_UP">
+            <summary>右上。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_RIGHT">
+            <summary>右。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_RIGHT_DOWN">
+            <summary>右下。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_DOWN">
+            <summary>下。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_LEFT_DOWN">
+            <summary>左下。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_LEFT">
+            <summary>左。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_LEFT_UP">
+            <summary>左上。</summary>
+        </member>
+        <member name="F:PikaLib.Input.JoystickPOV.POV_ALL">
+            <summary>全ボタン。</summary>
+        </member>
+        <member name="T:PikaLib.Input.InputException">
+            <summary>
+            PikaLib.Input 上の例外
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputException.#ctor">
+            <summary>
+            PikaLib.Input.InputException クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.InputException.#ctor(System.String)">
+            <summary>
+            指定したエラーメッセージを使用して、
+            PikaLib.Input.InputException クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+        </member>
+        <member name="M:PikaLib.Input.InputException.#ctor(System.String,System.Exception)">
+            <summary>
+            指定したエラーメッセージと、この例外の原因である内部例外への参照を使用して、
+            PikaLib.Input.InputException クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="message">例外の原因を説明するエラーメッセージ。</param>
+            <param name="innerException">現在の例外の原因である例外。内部例外が指定されていない場合はnullを返す。</param>
+        </member>
+        <member name="T:PikaLib.Input.Keyboard">
+            <summary>
+            キーボード。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.Keyboard.m_KeyboardState">
+            <summary>
+            キーボードの状態。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Input.Keyboard.m_Disposed">
+            <summary>
+            すでに破棄済みかどうかを表すフラグ。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.Keyboard.#ctor(Microsoft.DirectX.DirectInput.Device)">
+            <summary>
+            DirectInputのデバイスを使って、
+            PikaLib.Input.Keyboard クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="device">DirectInputのデバイス</param>
+        </member>
+        <member name="M:PikaLib.Input.Keyboard.ApplyNewState">
+            <summary>
+            最新状態を適用します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Input.Keyboard.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースを解放します。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="P:PikaLib.Input.Keyboard.Item(PikaLib.Input.Key)">
+            <summary>
+            指定されたキーが押されているか調べる。 
+            </summary>
+            <param name="key">キーの種類。</param>
+            <returns>指定されたキーが押されているかどうかの真偽値。</returns>
+        </member>
+        <member name="P:PikaLib.Input.Keyboard.ObjectName">
+            <summary>
+            オブジェクト名
+            </summary>
+        </member>
+    </members>
+</doc>

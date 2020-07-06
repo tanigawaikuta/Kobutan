@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PikaLib", "PikaLib\PikaLib.csproj", "{D30CB7AA-061D-4FBA-B976-451C70274F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PikaLib.File", "PikaLib.File\PikaLib.File.csproj", "{E424EB7F-704C-4E0D-8559-1E2579395FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PikaLib.Input", "PikaLib.Input\PikaLib.Input.csproj", "{855F57A9-6768-44CF-A78C-47BE9091A2DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PikaLib.Net", "PikaLib.Net\PikaLib.Net.csproj", "{BEB47276-690E-4B7A-9D77-F73FACE76593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PikaLib.Controls", "PikaLib.Controls\PikaLib.Controls.csproj", "{906F8028-45D1-4D74-8905-A0E8E01CE628}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5727111-C924-46BA-B091-226337332954}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D30CB7AA-061D-4FBA-B976-451C70274F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30CB7AA-061D-4FBA-B976-451C70274F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30CB7AA-061D-4FBA-B976-451C70274F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30CB7AA-061D-4FBA-B976-451C70274F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E424EB7F-704C-4E0D-8559-1E2579395FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E424EB7F-704C-4E0D-8559-1E2579395FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E424EB7F-704C-4E0D-8559-1E2579395FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E424EB7F-704C-4E0D-8559-1E2579395FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855F57A9-6768-44CF-A78C-47BE9091A2DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855F57A9-6768-44CF-A78C-47BE9091A2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855F57A9-6768-44CF-A78C-47BE9091A2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855F57A9-6768-44CF-A78C-47BE9091A2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB47276-690E-4B7A-9D77-F73FACE76593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB47276-690E-4B7A-9D77-F73FACE76593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB47276-690E-4B7A-9D77-F73FACE76593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB47276-690E-4B7A-9D77-F73FACE76593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906F8028-45D1-4D74-8905-A0E8E01CE628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906F8028-45D1-4D74-8905-A0E8E01CE628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906F8028-45D1-4D74-8905-A0E8E01CE628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906F8028-45D1-4D74-8905-A0E8E01CE628}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

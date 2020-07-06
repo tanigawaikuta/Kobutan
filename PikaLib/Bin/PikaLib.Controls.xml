@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PikaLib.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:PikaLib.Controls.UserControlSwitchingPanel">
+            <summary>
+            ユーザコントロール切り替えパネル。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.#ctor">
+            <summary>
+            PikaLib.Controls.UserControlSwitchingPanel クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.#ctor(System.Windows.Forms.UserControl)">
+            <summary>
+            表示したいユーザコントロールを使用して、
+            PikaLib.Controls.UserControlSwitchingPanel クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="userControl">表示したいユーザコントロール。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.ChangeUserContorol(System.Windows.Forms.UserControl)">
+            <summary>
+            渡されたユーザコントロールに切り替えます。
+            </summary>
+            <param name="userControl">切り替えたいユーザコントロール。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.ClearPanel">
+            <summary>
+            パネルをクリアします。
+            </summary>
+        </member>
+        <member name="F:PikaLib.Controls.UserControlSwitchingPanel.components">
+            <summary>
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:PikaLib.Controls.UserControlSwitchingPanel.InitializeComponent">
+            <summary>
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:PikaLib.Controls.UserControlSwitchingPanel.UserContorol">
+            <summary>
+            現在表示中のユーザコントロールを取得します。
+            </summary>
+            <returns>現在表示中のユーザコントロール。</returns>
+        </member>
+        <member name="T:PikaLib.Controls.MdiChildForm">
+            <summary>
+            MDI子フォーム。
+            このフォームは閉じられた後でも再表示することが可能です。
+            フォームのデザインはユーザーコントロールを渡すことで行います。
+            </summary>
+            <example> C#における使用例
+            <code>
+            class ParentForm
+            {
+                // 子フォームの参照
+                private PikaLib.Controls.MdiChildForm m_ChildForm;
+                
+                public void Initialize()
+                {
+                    // MDIコンテナを有効にする (デザイナ上からでも可)
+                    this.IsMdiContainer = true;
+                    // 子フォームとその上で表示させるユーザーコントロールを生成
+                    UserControl uc = new MyUserControl();
+                    m_ChildForm = new PikaLib.Controls.MdiChildForm(uc);
+                    // その他 m_ChildFormの設定など…
+                }
+                
+                public void ShowChildForm()
+                {
+                    // 初回、または閉じられている状態ならば子フォームを表示
+                    // すでに表示中の場合は何も起こらない
+                    m_ChildForm.Show();
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="F:PikaLib.Controls.MdiChildForm.components">
+            <summary>
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Controls.MdiChildForm.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージリソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:PikaLib.Controls.MdiChildForm.InitializeComponent">
+            <summary>
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:PikaLib.Controls.MdiChildForm.#ctor(System.Windows.Forms.UserControl,System.Windows.Forms.Form)">
+            <summary>
+            MDI子フォーム上に表示するユーザーコントロールと、
+            親となるフォームを使用して、
+            PikaLib.Controls. MdiChildForm クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="userControl">MDI子フォーム上に表示するユーザーコントロール。</param>
+            <param name="parent">親となるフォーム。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Controls.MdiChildForm.#ctor(System.Windows.Forms.UserControl,System.Windows.Forms.Form,System.String)">
+            <summary>
+            MDI子フォーム上に表示するユーザーコントロールと、
+            親となるフォームと、
+            フォームのタイトルを使用して、
+            PikaLib.Controls. MdiChildForm クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="userControl">MDI子フォーム上に表示するユーザーコントロール。</param>
+            <param name="parent">親となるフォーム。</param>
+            <param name="title">フォームのタイトル。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.Controls.MdiChildForm.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            フォームが閉じられる際に実行されます。
+            </summary>
+            <param name="e">イベントデータを格納している System.Windows.Forms.FormClosingEventArgs。</param>
+        </member>
+        <member name="P:PikaLib.Controls.MdiChildForm.MdiUserControl">
+            <summary>
+            MDI子フォーム上に表示するユーザーコントロールを取得します。
+            </summary>
+            <returns>MDI子フォーム上に表示するユーザーコントロール。</returns>
+        </member>
+    </members>
+</doc>

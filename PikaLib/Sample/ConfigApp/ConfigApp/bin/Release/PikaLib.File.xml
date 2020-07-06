@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PikaLib.File</name>
+    </assembly>
+    <members>
+        <member name="T:PikaLib.File.BinaryFile">
+            <summary>
+            バイナリファイル。
+            </summary>
+        </member>
+        <member name="M:PikaLib.File.BinaryFile.WriteBinaryFile(System.String,System.Object)">
+            <summary>
+            渡されたインスタンスの内容を指定されたバイナリファイルに書き込みます。
+            </summary>
+            <param name="filePath">書き込み先のファイルパス。</param>
+            <param name="instance">書き込むインスタンス。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.NotSupportedException">ファイル以外のデバイスを参照している(NTFS 以外の環境の "con:"、"com1:"、"lpt1:" など)際に発生します。</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">割り当てられていないドライブであるなど、指定されたパスが無効の際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に、必要なアクセス許可がない際に発生します。</exception>
+            <exception cref="T:System.UnauthorizedAccessException">ファイルまたはディレクトリが読み取り専用に設定されているなどでアクセスが許可されなかった際に発生します。</exception>
+            <exception cref="T:System.IO.PathTooLongException">パスやファイル名が長すぎる際に発生します。</exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.BinaryFile.WriteBinaryFile(System.IO.Stream,System.Object)">
+            <summary>
+            渡されたインスタンスの内容を指定されたバイナリファイルに書き込みます。
+            </summary>
+            <param name="stream">書き込み先のストリーム。</param>
+            <param name="instance">書き込むインスタンス。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">シリアル化に失敗した際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に必要なアクセス許可がない際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.BinaryFile.ReadBinaryFile(System.String)">
+            <summary>
+            指定されたバイナリファイルを読み込みます。
+            </summary>
+            <param name="filePath">読み込み先のファイルパス。</param>
+            <returns>読み込まれたインスタンス。</returns>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.NotSupportedException">ファイル以外のデバイスを参照している(NTFS 以外の環境の "con:"、"com1:"、"lpt1:" など)際に発生します。</exception>
+            <exception cref="T:System.IO.FileNotFoundException">指定されたファイルがなかった際に発生します。</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">割り当てられていないドライブであるなど、指定されたパスが無効の際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に、必要なアクセス許可がない際に発生します。</exception>
+            <exception cref="T:System.IO.PathTooLongException">パスやファイル名が長すぎる際に発生します。</exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.BinaryFile.ReadBinaryFile(System.IO.Stream)">
+            <summary>
+            指定されたバイナリファイルを読み込みます。
+            </summary>
+            <param name="stream">読み込み先のストリーム。</param>
+            <returns>読み込まれたインスタンス。</returns>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">シリアル化に失敗した際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に必要なアクセス許可がない際に発生します。</exception>
+        </member>
+        <member name="T:PikaLib.File.IniFile">
+            <summary>
+            INIファイル。
+            </summary>
+        </member>
+        <member name="M:PikaLib.File.IniFile.#ctor(System.String)">
+            <summary>
+            INIファイルのファイルパスを使用して、
+            PikaLib.File.IniFile クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="filePath">INIファイルのファイルパス。</param>
+        </member>
+        <member name="M:PikaLib.File.IniFile.GetValue(System.String,System.String,System.String)">
+            <summary>
+            sectionとkeyからiniファイルの設定値を取得します。
+            指定したsectionとkeyの組合せが無い場合はdefaultvalueで指定した値が返ります。
+            </summary>
+            <returns>
+            sectionとkeyに対応したiniファイルの設定値。
+            </returns>
+        </member>
+        <member name="P:PikaLib.File.IniFile.Item(System.String,System.String)">
+            <summary>
+            sectionとkeyからiniファイルの設定値を取得または設定します。 
+            </summary>
+            <returns>指定したsectionとkeyの組合せが無い場合は""が返ります。</returns>
+        </member>
+        <member name="P:PikaLib.File.IniFile.FilePath">
+            <summary>
+            ファイルパスを取得または設定します。
+            ファイルが存在しない場合は初回書き込み時に作成されます。
+            </summary>
+        </member>
+        <member name="T:PikaLib.File.SerializableXML">
+            <summary>
+            シリアライズ化対応のXML。
+            XMLに対する操作はこのクラスを継承し、
+            読み込み・保存を行いたいメンバを追加することで可能となります。
+            </summary>
+            <remarks>
+            このクラスを継承するクラスは必ずpublic にして、[Serializable]属性を付けなければなりません。
+            また、XMLに保存したいメンバはpublic にしておく必要があります。
+            追加するメンバはシリアライズ可能なデータである必要があります。
+            例えば、System.Drawing.Color は直接シリアライズには対応していないので、
+            文字列に変換し、読み込む際は文字列から復元する必要があります。
+            </remarks>
+            <example> C#における使用例
+            <code>
+            // 必ずpublic にして、[Serializable]属性を付ける
+            [Serializable]
+            public class Config : PikaLib.File.SerializableXML
+            {
+                // 対象となるメンバ
+                public string StringData;
+                public int IntData;
+                public byte[] ByteDatas = new byte[] {0, 1, 2, 3};
+                // 対象とならないメンバ。[XmlIgnoreAttribute]を付ける
+                [XmlIgnoreAttribute]
+                private int PrivateData;
+                
+                // いくつかの項目をまとめる (座標の例)
+                public CPos Pos;
+                public struct CPos
+                {
+                    public int x;
+                    public int y;
+                }
+                
+                // デフォルト設定の適用
+                public override void ApplyDefault() { デフォルト値の代入処理 }
+            }
+            
+            class Example
+            {
+                private Config m_Config;
+            
+                public LoadConfig()
+                {
+                    m_Config = (Config)PikaLib.File.SerializableXML.ReadXMLFile("Config.xml", typeof(Config));
+                }
+                public SaveConfig()
+                {
+                    m_Config.StringData = 新しい値;
+                    m_Config.IntData = 新しい値;
+                    …
+                    m_Config.Save();
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.#ctor">
+            <summary>
+            PikaLib.File.SerializableXML クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.Save">
+            <summary>
+            FilePathプロパティを用いて、WriteXMLFile()メソッドを実行し、
+            現在のメンバをXMLファイルに保存します。
+            </summary>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.NotSupportedException">ファイル以外のデバイスを参照している(NTFS 以外の環境の "con:"、"com1:"、"lpt1:" など)際に発生します。</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">割り当てられていないドライブであるなど、指定されたパスが無効の際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に、必要なアクセス許可がない際に発生します。</exception>
+            <exception cref="T:System.UnauthorizedAccessException">ファイルまたはディレクトリが読み取り専用に設定されているなどでアクセスが許可されなかった際に発生します。</exception>
+            <exception cref="T:System.IO.PathTooLongException">パスやファイル名が長すぎる際に発生します。</exception>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.ToStream">
+            <summary>
+            現在のオブジェクトのシリアル化により得られたストリームを取得します。
+            </summary>
+            <returns>シリアル化により得られたストリーム。</returns>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.ToString">
+            <summary>
+            XMLファイルに変換された際の文字列を取得します。
+            </summary>
+            <returns>XMLファイルに変換された際の文字列。</returns>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+            <exception cref="T:System.Text.DecoderFallbackException">フォールバックにより発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.WriteXMLFile(System.String,PikaLib.File.SerializableXML)">
+            <summary>
+            渡されたインスタンスの内容を指定されたXMLファイルに書き込みます。
+            </summary>
+            <param name="filePath">書き込み先ファイルのパス。</param>
+            <param name="instance">書き込むインスタンス。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.NotSupportedException">ファイル以外のデバイスを参照している(NTFS 以外の環境の "con:"、"com1:"、"lpt1:" など)際に発生します。</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">割り当てられていないドライブであるなど、指定されたパスが無効の際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に、必要なアクセス許可がない際に発生します。</exception>
+            <exception cref="T:System.UnauthorizedAccessException">ファイルまたはディレクトリが読み取り専用に設定されているなどでアクセスが許可されなかった際に発生します。</exception>
+            <exception cref="T:System.IO.PathTooLongException">パスやファイル名が長すぎる際に発生します。</exception>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.WriteXMLFile(System.IO.Stream,PikaLib.File.SerializableXML)">
+            <summary>
+            渡されたインスタンスの内容を指定されたXMLファイルに書き込みます。
+            </summary>
+            <param name="stream">書き込み先のストリーム。</param>
+            <param name="instance">書き込むインスタンス。</param>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に必要なアクセス許可がない際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.ReadXMLFile(System.String,System.Type,System.Boolean)">
+            <summary>
+            指定されたXMLファイルを読み込みます。
+            </summary>
+            <param name="filePath">読み込み先のファイルパス。</param>
+            <param name="type">読み込むインスタンスの型。</param>
+            <param name="enableDefaultFlg">デフォルト有効フラグ (trueの場合は読み込み失敗時にデフォルト設定を返します)。</param>
+            <returns>読み込みにより生成されたインスタンス。</returns>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.NotSupportedException">ファイル以外のデバイスを参照している(NTFS 以外の環境の "con:"、"com1:"、"lpt1:" など)際に発生します。</exception>
+            <exception cref="T:System.IO.FileNotFoundException">指定されたファイルがなかった際に発生します。</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">割り当てられていないドライブであるなど、指定されたパスが無効の際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に、必要なアクセス許可がない際に発生します。</exception>
+            <exception cref="T:System.IO.PathTooLongException">パスやファイル名が長すぎる際に発生します。</exception>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.ReadXMLFile(System.IO.Stream,System.Type,System.String,System.Boolean)">
+            <summary>
+            指定されたXMLファイルを読み込みます。
+            </summary>
+            <param name="stream">読み込み先のストリーム。</param>
+            <param name="type">読み込むインスタンスの型。</param>
+            <param name="filePath">ファイルパス。Save() メソッドなどのために使われます。</param>
+            <param name="enableDefaultFlg">デフォルト有効フラグ (trueの場合は読み込み失敗時にデフォルト設定を返します)。</param>
+            <returns>読み込みにより生成されたインスタンス。</returns>
+            <exception cref="T:System.ArgumentException">不正なパラメータが渡された際に発生します。</exception>
+            <exception cref="T:System.ArgumentNullException">nullがパラメータとして渡された際に発生します。</exception>
+            <exception cref="T:System.InvalidOperationException">シリアル化に失敗した際に発生します。</exception>
+            <exception cref="T:System.Security.SecurityException">呼び出し元に必要なアクセス許可がない際に発生します。</exception>
+        </member>
+        <member name="M:PikaLib.File.SerializableXML.ApplyDefault">
+            <summary>
+            デフォルトの内容を適用します。
+            </summary>
+            <remarks>
+            このメソッドは継承先でオーバーライドする必要があります。
+            追加するべき処理は、各メンバのデフォルトの値を代入する処理です。
+            </remarks>
+        </member>
+        <member name="P:PikaLib.File.SerializableXML.FilePath">
+            <summary>
+            ファイルパスを取得または設定します。
+            Save() メソッド呼び出し時に保存先として使用されます。
+            </summary>
+        </member>
+    </members>
+</doc>

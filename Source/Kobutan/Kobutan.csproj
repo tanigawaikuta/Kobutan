@@ -42,13 +42,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PikaLib">
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.dll</HintPath>
     </Reference>
     <Reference Include="PikaLib.Controls">
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.Controls.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.Controls.dll</HintPath>
     </Reference>
     <Reference Include="PikaLib.File">
-      <HintPath>..\..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
+      <HintPath>..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

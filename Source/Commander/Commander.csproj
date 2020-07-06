@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D1BE0BD0-49D0-4C06-A63E-D90233A75D10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Commander</RootNamespace>
+    <AssemblyName>Commander</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Test\TestSpace\</OutputPath>
+    <IntermediateOutputPath>..\..\Obj\Commander\Debug\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <IntermediateOutputPath>..\..\Obj\Commander\Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="PikaLib, Version=1.0.4810.38921, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PikaLib\Bin\PikaLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PikaLib.File, Version=1.0.4810.38921, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommanderFile.cs" />
+    <Compile Include="CommanderInstance.cs" />
+    <Compile Include="CommanderSetting.cs" />
+    <Compile Include="ObjectBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen\CommanderScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\CommanderScreen.Designer.cs">
+      <DependentUpon>CommanderScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\ConsoleScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\ConsoleScreen.Designer.cs">
+      <DependentUpon>ConsoleScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\InformationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\InformationScreen.Designer.cs">
+      <DependentUpon>InformationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\MonitorScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\MonitorScreen.Designer.cs">
+      <DependentUpon>MonitorScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\PropertyScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\PropertyScreen.Designer.cs">
+      <DependentUpon>PropertyScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\SendScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screen\SendScreen.Designer.cs">
+      <DependentUpon>SendScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Script\CLI\CLIScriptManager.cs" />
+    <Compile Include="Script\CLI\VBScript.cs" />
+    <Compile Include="Script\CLI\VBScriptWithComplement.cs" />
+    <Compile Include="Script\CommanderBase.cs" />
+    <Compile Include="Script\CommanderScript.cs" />
+    <Compile Include="Script\CLI\CSharpScript.cs" />
+    <Compile Include="Script\CLI\CSharpScriptWithComplement.cs" />
+    <Compile Include="Script\CLI\CLIWithComplementImport.cs" />
+    <Compile Include="Script\Exception.cs" />
+    <Compile Include="Script\Import.cs" />
+    <Compile Include="Script\Propertys.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Screen\CommanderScreen.resx">
+      <DependentUpon>CommanderScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\InformationScreen.resx">
+      <DependentUpon>InformationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\SendScreen.resx">
+      <DependentUpon>SendScreen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Communication\Communication.csproj">
+      <Project>{51F85D88-FF45-439F-A2A1-378B19156413}</Project>
+      <Name>Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+    <RemoveDir Condition="Exists('obj\')" Directories="obj\" />
+    <ItemGroup>
+      <DeleteFiles Include="$(OutputPath)PikaLib.xml" />
+      <DeleteFiles Include="$(OutputPath)PikaLib.*.xml" />
+    </ItemGroup>
+    <Delete Files="@(DeleteFiles)" />
+  </Target>
+  <Target Name="AfterClean">
+    <RemoveDir Condition="Exists('obj\')" Directories="obj\" />
+  </Target>
+</Project>

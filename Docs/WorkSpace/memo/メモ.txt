@@ -1,0 +1,47 @@
+[用語]
+ROS : 
+
+
+[ファームウェア アップグレード]
+  ① ファームウェアを用意 http://files.yujinrobot.com/kobuki/firmware/
+  ② フラッシュの書き込みツールをインストール http://files.yujinrobot.com/robot/kobuki/Flash_Loader_Demonstrator_v2.5.0_Setup.exe
+  ③ ロボットの電源を切る
+  ④ "firmware download mode"に切り替え
+http://kobuki.yujinrobot.com/documentation/howtos/upgrading-firmware/upgrading-firmware-windows/
+
+
+[Kobukiドライバのインストール]
+  ① sygwinのインストール
+  ② apt-cygのインストール
+  ③ apt-getをapt-cygに変えて以下のサイトの通りにインストールを行う
+     http://ros.org/doc/groovy/api/kobuki_driver/html/enInstallationLinuxGuide.html
+
+以下 追記、書き換え
+
+python 2.7 にアップデート
+http://www.tux.org/~mayer/cygwin/python/index.html
+
+setuptoolsのインストール
+https://pypi.python.org/pypi/setuptools
+sh setuptools-0.6c11-py2.7.egg
+
+その他 pythonのパッケージ
+https://pypi.python.org/pypi/catkin_pkg/
+https://pypi.python.org/pypi/nose/
+https://pypi.python.org/pypi/EmPy/
+python setup.py install
+
+Google Testのインストール
+http://code.google.com/p/googletest/
+autoreconf
+./configure
+make
+make check
+make install
+
+Eigen
+http://eigen.tuxfamily.org/index.php?title=Main_Page
+cp -r eigen3 /usr/local/include
+
+cmake ../src -DCATKIN_WHITELIST_PACKAGES=$KOBUKI_DRIVER_PACKAGES -DCMAKE_INSTALL_PREFIX=$KOBUKI_DRIVER_LOCATION -DCMAKE_LEGACY_CYGWIN_WIN32=0
+

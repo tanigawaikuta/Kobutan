@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<CommanderSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Information>
+    <Name>KobukiSample7</Name>
+    <Version>1.0</Version>
+    <BaseCommander></BaseCommander>
+    <Description>Kobukiサンプル7。エンコーダ拡張。</Description>
+  </Information>
+  <Communication>
+    <Protocol>Kobuki</Protocol>
+    <SendThreadEnable>true</SendThreadEnable>
+    <SendCycle>10</SendCycle>
+  </Communication>
+  <Programming>
+    <Language>CSharp</Language>
+    <WithComplement>true</WithComplement>
+  </Programming>
+</CommanderSetting>

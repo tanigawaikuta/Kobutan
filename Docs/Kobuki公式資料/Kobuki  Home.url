@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=http://kobuki.yujinrobot.com/
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=http://kobuki.yujinrobot.com/
+IDList=
+IconFile=http://kobuki.yujinrobot.com/files/8013/5106/0629/kobuki_back_trans.ico
+IconIndex=1

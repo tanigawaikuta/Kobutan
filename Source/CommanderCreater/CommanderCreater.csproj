@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49A970E9-60FD-413F-AE20-D486B2B59BF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommanderCreater</RootNamespace>
+    <AssemblyName>CommanderCreater</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Test\TestSpace\</OutputPath>
+    <IntermediateOutputPath>..\..\Obj\CommanderCreater\Debug\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\</OutputPath>
+    <IntermediateOutputPath>..\..\Obj\CommanderCreater\Release\</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Resource\CommanderCreater.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azuki">
+      <HintPath>..\..\Lib\Azuki.dll</HintPath>
+    </Reference>
+    <Reference Include="PikaLib, Version=1.0.4810.38921, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PikaLib\Bin\PikaLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PikaLib.Controls, Version=1.0.4813.4148, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PikaLib\Bin\PikaLib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="PikaLib.File, Version=1.0.4813.4381, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PikaLib\Bin\PikaLib.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\CommanderCreaterConfig.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiCommanderExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiCommanderExplorer.Designer.cs">
+      <DependentUpon>MdiCommanderExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiEditor.Designer.cs">
+      <DependentUpon>MdiEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\EditorScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\EditorScreen.Designer.cs">
+      <DependentUpon>EditorScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\PropertyEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\PropertyEditor.Designer.cs">
+      <DependentUpon>PropertyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\ScriptEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiEditorScreens\ScriptEditor.Designer.cs">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiProperty.Designer.cs">
+      <DependentUpon>MdiProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\MdiToolBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MDI\MdiToolBox.Designer.cs">
+      <DependentUpon>MdiToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForm\OptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\OptionForm.Designer.cs">
+      <DependentUpon>OptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\OptionScreens\OptionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubForm\OptionScreens\OptionScreen.Designer.cs">
+      <DependentUpon>OptionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\VersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\VersionForm.Designer.cs">
+      <DependentUpon>VersionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MdiCommanderExplorer.resx">
+      <DependentUpon>MdiCommanderExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MdiEditor.resx">
+      <DependentUpon>MdiEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MdiEditorScreens\EditorScreen.resx">
+      <DependentUpon>EditorScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MdiEditorScreens\PropertyEditor.resx">
+      <DependentUpon>PropertyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\MdiEditorScreens\ScriptEditor.resx">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resource\CommanderCreater.ico" />
+    <Content Include="Resource\SystemIcon\CopyHS.png" />
+    <Content Include="Resource\SystemIcon\CutHS.png" />
+    <Content Include="Resource\SystemIcon\DeleteHS.png" />
+    <Content Include="Resource\SystemIcon\Edit_RedoHS.png" />
+    <Content Include="Resource\SystemIcon\Edit_UndoHS.png" />
+    <Content Include="Resource\SystemIcon\Find_VS.png" />
+    <Content Include="Resource\SystemIcon\NewDocumentHS.png" />
+    <Content Include="Resource\SystemIcon\openHS.png" />
+    <Content Include="Resource\SystemIcon\OptionsHS.png" />
+    <Content Include="Resource\SystemIcon\PasteHS.png" />
+    <Content Include="Resource\SystemIcon\PrintHS.png" />
+    <Content Include="Resource\SystemIcon\Properties.png" />
+    <Content Include="Resource\SystemIcon\saveHS.png" />
+    <Content Include="Resource\SystemIcon\TextboxHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commander\Commander.csproj">
+      <Project>{D1BE0BD0-49D0-4C06-A63E-D90233A75D10}</Project>
+      <Name>Commander</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <RemoveDir Condition="Exists('obj\')" Directories="obj\" />
+    <ItemGroup>
+      <DeleteFiles Include="$(OutputPath)PikaLib.xml" />
+      <DeleteFiles Include="$(OutputPath)PikaLib.*.xml" />
+    </ItemGroup>
+    <Delete Files="@(DeleteFiles)" />
+  </Target>
+  <Target Name="AfterClean">
+    <RemoveDir Condition="Exists('obj\')" Directories="obj\" />
+  </Target>
+</Project>

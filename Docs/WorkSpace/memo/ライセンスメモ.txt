@@ -1,0 +1,11 @@
+ライブラリ再配布の可否
+
+DotNetZip
+    Microsoft Public License
+    商用、非商用ともに可
+
+IronPython
+    Apache License 2
+    LICENSEファイルを入れとけばいい？
+
+
